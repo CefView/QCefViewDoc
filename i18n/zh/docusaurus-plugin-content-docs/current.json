@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "下一节",
+    "description": "The label for version current"
+  },
+  "sidebar.default.category.Getting Started": {
+    "message": "快速开始",
+    "description": "The label for category Getting Started in sidebar default"
+  },
+  "sidebar.default.category.Guide": {
+    "message": "指引",
+    "description": "The label for category Guide in sidebar default"
+  },
+  "sidebar.default.category.Reference": {
+    "message": "API文档",
+    "description": "The label for category Reference in sidebar default"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "QCefView",
+    "description": "The title in the navbar"
+  },
+  "item.label.Getting Started": {
+    "message": "快速开始",
+    "description": "Navbar item with label Getting Started"
+  },
+  "item.label.Guide": {
+    "message": "指引",
+    "description": "Navbar item with label Guide"
+  },
+  "item.label.Reference": {
+    "message": "API文档",
+    "description": "Navbar item with label Reference"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
