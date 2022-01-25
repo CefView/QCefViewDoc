@@ -12,7 +12,7 @@ QCefView提供C++/Javascript互操作的能力，因此开发者可以从C++中�
 
 ## 从Javascript中调用C++
 
-桥接对象提供一下方法来从Javascript中调用C++：
+桥接对象提供以下方法来从Javascript中调用C++：
 
 [`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`,
 
