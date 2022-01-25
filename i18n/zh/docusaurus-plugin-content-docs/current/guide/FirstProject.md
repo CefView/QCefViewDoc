@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-可以看到初始化[`QCefContext`](/docs/reference/QCefContext)实例的时候需要传入一个[`QCefConfig`](/docs/reference/QCefConfig)。你可以通过[`QCefConfig`](/docs/reference/QCefConfig)设置一些CEF的配置参数，例如可也设置日志级别，调试端口等。更多详细参数请参与API文档[`QCefConfig`](/docs/reference/QCefConfig)。
+可以看到初始化[`QCefContext`](/docs/reference/QCefContext)实例的时候需要传入一个[`QCefConfig`](/docs/reference/QCefConfig)。你可以通过[`QCefConfig`](/docs/reference/QCefConfig)设置一些CEF的配置参数，例如可以设置日志级别，调试端口等。更多详细参数请参考API文档[`QCefConfig`](/docs/reference/QCefConfig)。
 
 不要试图主动析构[`QCefContext`](/docs/reference/QCefContext)实列，该实例跟随Application的生命周期存在和销毁，如果提前销毁则会导致CEF内部状态错误。
 
