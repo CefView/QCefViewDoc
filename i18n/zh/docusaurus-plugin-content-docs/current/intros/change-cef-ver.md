@@ -9,7 +9,7 @@ title: 更换CEF版本
 
 ## 1. 选择CEF版本
 
-可以从CEF Automated Builds网站https://cef-builds.spotifycdn.com/index.html选择需要使用的CEF版本。
+可以从CEF Automated Builds网站[https://cef-builds.spotifycdn.com/index.html](https://cef-builds.spotifycdn.com/index.html)选择需要使用的CEF版本。
 
 ## 2. Modify QCefConfig.cmake
 

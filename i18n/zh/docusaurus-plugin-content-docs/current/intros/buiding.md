@@ -32,7 +32,7 @@ export QTDIR=/urs/share/Qt/6.2.2/gcc_64
 ## 编译构建
 
 
-从https://github.com/CefView/QCefView检出最新代码，不要忘记初始化submodule。该项目依赖子模块：https://github.com/CefView/CefViewCore。
+从[https://github.com/CefView/QCefView](https://github.com/CefView/QCefView)检出最新代码，不要忘记初始化submodule。该项目依赖子模块：[https://github.com/CefView/CefViewCore](https://github.com/CefView/CefViewCore)。
 
 ### Windows
 ```bash

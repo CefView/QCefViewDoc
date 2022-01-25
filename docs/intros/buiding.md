@@ -31,7 +31,7 @@ export QTDIR=/urs/share/Qt/6.2.2/gcc_64
 
 ## Build
 
-Just check out the repo from https://github.com/CefView/QCefView, then init the submodule. This repo depends on the submodule https://github.com/CefView/CefViewCore. 
+Just check out the repo from [https://github.com/CefView/QCefView](https://github.com/CefView/QCefView), then init the submodule. This repo depends on the submodule [https://github.com/CefView/CefViewCore](https://github.com/CefView/CefViewCore). 
 
 ### Windows
 ```bash

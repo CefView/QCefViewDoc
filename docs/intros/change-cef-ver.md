@@ -9,7 +9,7 @@ If you want to change the version of CEF binary distribution, please follow the 
 
 ## 1. Find Target Version
 
-Find the target version you want from the CEF Automated Builds website: https://cef-builds.spotifycdn.com/index.html.
+Find the target version you want from the CEF Automated Builds website: [https://cef-builds.spotifycdn.com/index.html](https://cef-builds.spotifycdn.com/index.html).
 
 ## 2. Modify QCefConfig.cmake
 
