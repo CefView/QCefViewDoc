@@ -2,8 +2,8 @@
 title: Web APIs
 ---
 
-# object `window.CefView`
-QCefView added the Javascript bridge object `CefView` to `window` object for all browsers frames, with this bridge object you can perform communication between native and web context at anytime
+# object `window.CefViewClient`
+QCefView added the Javascript bridge object `CefViewClient` to `window` object for all browsers frames, with this bridge object you can perform communication between native and web context at anytime
 
 ## Summary
  Members                        | Descriptions                                
