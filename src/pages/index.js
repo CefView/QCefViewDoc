@@ -7,6 +7,7 @@ import Translate from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
+import HomepageCarousel from "../components/HomepageCarousel";
 
 import CefViewBridge from "../components/CefViewBridge";
 
@@ -42,6 +43,7 @@ export default function Home() {
     <Layout title={`${siteConfig.title}`} description="">
       <HomepageHeader />
       <main>
+        <HomepageCarousel />
         <HomepageFeatures />
       </main>
     </Layout>

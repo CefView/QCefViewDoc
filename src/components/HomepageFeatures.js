@@ -47,7 +47,6 @@ const FeatureList = [
 ];
 
 function Feature({ Svg, title, description }) {
-  console.log(Svg);
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">

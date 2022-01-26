@@ -1,0 +1,12 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  height: 600px;
+}
+
+.cardImage {
+  /* width: 1920px;
+  height: 1080px; */
+}
