@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "QCefView - A QWidget-based Web View Component Integrated with CEF",
+  title: "QCefView",
   tagline: "A QWidget-based Web View Component Integrated with CEF",
   url: "https://CefView.github.io",
   baseUrl: "/QCefView/",
