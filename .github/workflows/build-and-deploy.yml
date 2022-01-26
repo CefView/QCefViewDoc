@@ -33,7 +33,14 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.PUBLISH_GHPAGES_SECRET }}
       with:
+        # Source directory from the origin directory
         source-directory: 'build'
-        destination-repository-name: 'CefView/QCefView'
+        # Name of the destination username/organization
+        destination-github-username: CefView
+        # Destination repository
+        destination-repository-name: QCefView
+        # Email for the git commit
+        user-email: sheentianshen@gmail.com
+        # [Optional] set target branch name for the destination repository. Defaults to "main"
         target-branch: gh-pages
       
