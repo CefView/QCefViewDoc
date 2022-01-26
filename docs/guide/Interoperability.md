@@ -20,7 +20,7 @@ When this method gets called from Javascript, the following Qt signal will be em
 
 `void `[`invokeMethod`](/docs/reference/QCefView#class_q_cef_view_1aa407f7491139a2d5331566c8346a58c8)`(int browserId,int frameId,const QString & method,const QVariantList & arguments)`
 
-> **⚠ NOTE: The Javascript method [`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)` is `SYNCHRONOUS` operation, that means the calling from Javascript will only return after C++ Qt slot has returned**
+> **⚠ NOTE: The Javascript method [`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)` is `ASYNCHRONOUS` operation, that means the calling from Javascript returns immediately regardless the execution of C++ Qt slot**
 
 Now let's write a small piece of code to demonstrate the invocation from Javascript to C++.
 
