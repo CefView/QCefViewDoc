@@ -29,11 +29,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     
+
     - name: Publish to gh-pages
-      uses: ad-m/github-push-action@v0.6.0
+      uses: cpina/github-action-push-to-another-repository@v1.4.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PUBLISH_GHPAGES_SECRET }}
       with:
-        github_token: ${{ secrets.PUBLISH_GHPAGES_SECRET }}
-        directory: build
-        repository: CefView/QCefView
-        branch: gh-pages
+        source-directory: 'build'
+        destination-repository-name: 'CefView/QCefView'
+        target-branch: gh-pages
       
