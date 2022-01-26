@@ -2,73 +2,75 @@
 title: Web APIs
 ---
 
-# object `window.CefViewClient`
+# Web APIs
+
+## object `window.CefViewClient`
 QCefView added the Javascript bridge object `CefViewClient` to `window` object for all browsers frames, with this bridge object you can perform communication between native and web context at anytime
 
-## Summary
+### Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 [`addEventListener`](#web_apis_addEventListener)`(name, listener)` | Adds a listener for the event with specified name
 [`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` | Removes the listener for the event with specified name
 [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` | Invokes a native method with the specified name and arguments
 
-## Members
+### Members
 
 ---
-### [`addEventListener`](#web_apis_addEventListener)`(name, listener)` <a class="anchor" id="web_apis_addEventListener"></a>
+#### [`addEventListener`](#web_apis_addEventListener)`(name, listener)` <a class="anchor" id="web_apis_addEventListener"></a>
 
 Adds a listener for the event with specified name
 
-#### Parameters
+##### Parameters
 * `name` The event name
 * `listener` The listener callback function
 
 ---
-### [`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` <a class="anchor" id="web_apis_removeEventListener"></a>
+#### [`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` <a class="anchor" id="web_apis_removeEventListener"></a>
 
 Removes the listener for the event with specified name
 
-#### Parameters
+##### Parameters
 * `name` The event name
 * `listener` The listener callback function
 
 ---
-### [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` <a class="anchor" id="web_apis_invokeMethod"></a>
+#### [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` <a class="anchor" id="web_apis_invokeMethod"></a>
 
 Invokes a native method with the specified name and arguments
 
-#### Parameters
+##### Parameters
 * `name` The method name
 * `..args` The arguments for the method
 
 
-# object `window`
+## object `window`
 QCefView added some extra methods to the `window` object for all browsers frames, with these methods you can perform communication between native and web context
 
-## Summary
+### Summary
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` | Sends a cef query request to the native context
 [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` | Cancels the query request with the specified id
 
-## Members
+### Members
 
 ---
-### [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` <a class="anchor" id="web_apis_CefViewQuery"></a>
+#### [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` <a class="anchor" id="web_apis_CefViewQuery"></a>
 
 Sends a cef query request to the native context
 
-#### Parameters
+##### Parameters
 * `query` The query object
 
-#### Returns
+##### Returns
 * The query id
 
 ---
-### [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` <a class="anchor" id="web_apis_CefViewQueryCancel"></a>
+#### [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` <a class="anchor" id="web_apis_CefViewQueryCancel"></a>
 
 Cancels the query request with the specified id
 
-#### Parameters
+##### Parameters
 * `id` The query id
