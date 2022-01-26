@@ -168,7 +168,7 @@ MainWindow::onBtnChangeColorClicked()
 }
 ```
 
-### Run the Application
+### 运行应用
 
 启动应用，可以看到如下界面：
 
