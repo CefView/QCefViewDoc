@@ -47,7 +47,6 @@ const FeatureList = [
 ];
 
 function Feature({ Svg, title, description }) {
-  console.log(Svg);
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
@@ -63,7 +62,7 @@ function Feature({ Svg, title, description }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <div className={styles.featuresSec}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
@@ -71,6 +70,6 @@ export default function HomepageFeatures() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
