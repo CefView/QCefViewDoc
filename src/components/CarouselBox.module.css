@@ -1,0 +1,20 @@
+.carouselBox {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: middle;
+}
+
+.cardItem {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.cardImage {
+  display: block;
+}

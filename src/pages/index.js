@@ -7,7 +7,7 @@ import Translate from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
-import HomepageCarousel from "../components/HomepageCarousel";
+import CarouselBox from "../components/CarouselBox";
 
 import CefViewBridge from "../components/CefViewBridge";
 
@@ -17,20 +17,32 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intros"
-          >
-            <Translate
-              id="index.ButtonText.getStated"
-              description="The text for button on index center"
-            >
-              Get Started
-            </Translate>
-          </Link>
+        <div className={clsx("row", styles.indexRow)}>
+          <div className="col">
+            <h1 className="hero__title">{siteConfig.title}</h1>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/intros"
+              >
+                <Translate
+                  id="index.ButtonText.getStated"
+                  description="The text for button on index center"
+                >
+                  Get Started
+                </Translate>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={clsx("row", styles.indexRow)}>
+          <div className="col">
+            <div className={styles.carousel}>
+              <CarouselBox />
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -43,7 +55,6 @@ export default function Home() {
     <Layout title={`${siteConfig.title}`} description="">
       <HomepageHeader />
       <main>
-        <HomepageCarousel />
         <HomepageFeatures />
       </main>
     </Layout>
