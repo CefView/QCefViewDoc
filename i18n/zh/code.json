@@ -1,4 +1,7 @@
 {
+  "index.tagLine": {
+    "message": "基于QWidget集成CEF的Web View 组件"
+  },
   "theme.ErrorPageContent.title": {
     "message": "出了点问题.",
     "description": "The title of the fallback page when the page crashed"
