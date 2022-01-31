@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Interoperability
 
-QCefView provide the capabilities of interoperability between native context and web context, thus the developer can call Javascript from C++ code easily, vice versa.
+QCefView provides the capabilities of interoperability between native context and web context, thus the developer can call Javascript from C++ code easily, vice versa.
 
 The approach of the interoperability was implemented by inserting a bridge object into the web context displayed in all the frames and browsers managed by QCefView. The bridge object provides methods for communicating with native code. For more details please refer to the API reference [WebAPIs](/docs/reference/WebAPIs)
 
