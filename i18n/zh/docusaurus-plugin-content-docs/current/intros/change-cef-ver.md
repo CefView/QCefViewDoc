@@ -11,7 +11,7 @@ title: 更换CEF版本
 
 可以从CEF Automated Builds网站[https://cef-builds.spotifycdn.com/index.html](https://cef-builds.spotifycdn.com/index.html)选择需要使用的CEF版本。
 
-## 2. Modify QCefConfig.cmake
+## 2. 修改QCefConfig.cmake文件
 
 修改文件[CefConfig.cmake](https://github.com/CefView/CefViewCore/blob/3ba46626d9739bd6266356828400ca1de41c1f20/CefConfig.cmake)中的CEF下载连接。
 
@@ -20,7 +20,7 @@ title: 更换CEF版本
 
 设置 **`CEF_SDK_VERSION`** 为要使用的目标版本。
 
-## 3. Build QCefView
+## 3. 构建QCefView
 
 按照上一节的内容构建编译QCefView项目即可。
 
