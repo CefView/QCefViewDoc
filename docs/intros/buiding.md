@@ -26,7 +26,7 @@ export QTDIR=/usr/local/Cellar/qt5/5.4.1/clang_64
 
 On Linux:
 ```bash
-export QTDIR=/urs/share/Qt/6.2.2/gcc_64
+export QTDIR=/usr/share/Qt/6.2.2/gcc_64
 ``` 
 
 ## Build
