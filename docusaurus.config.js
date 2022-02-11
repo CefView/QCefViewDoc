@@ -29,6 +29,8 @@ const config = {
         blog: false,
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/CefView/QCefViewDoc/tree/master",
+          editLocalizedFiles: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
