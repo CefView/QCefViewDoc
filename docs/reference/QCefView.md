@@ -32,6 +32,7 @@ Represents the CEF browser view
 `public bool `[`triggerEvent`](#class_q_cef_view_1aaccdc475dc89f9ca4885c94e8f50421d)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event,int frameId)` | Triggers the event for specified frame
 `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | Broad cast the event for all frames
 `public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
+`public bool `[`executeJavascript`](#class_q_cef_view_fcd94eb6960911ecb909-0242ac120002)`(int frameId,const QString& code,const QString& url,int startLine = 0)` | Executes javascript code in specified frame
 `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1a3a7a88f6705481605cef678c111a6cf5)`(bool isLoading,bool canGoBack,bool canGoForward)` | Gets called on loading state changed
 `{signal} public void `[`loadStart`](#class_q_cef_view_1a74964d85e3318a693e9d93a24176fb7c)`()` | Gets called on loading starts
 `{signal} public void `[`loadEnd`](#class_q_cef_view_1ab09aca25ea627999b77c951c804c9a68)`(int httpStatusCode)` | Gets called on loading ends
@@ -184,6 +185,23 @@ Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
 
 #### Parameters
 * `query` The query instance
+
+#### Returns
+True on successful; otherwise false
+
+---
+### `public bool `[`executeJavascript`](#class_q_cef_view_fcd94eb6960911ecb909-0242ac120002)`(int frameId,const QString& code,const QString& url,int startLine = 0)` <a class="anchor" id="class_q_cef_view_fcd94eb6960911ecb909-0242ac120002"></a>
+
+Executes javascript code in specified frame
+
+#### Parameters
+* `frameId` The frame id
+
+* `code` The javascript code
+
+* `url` The URL where the script in question can be found, if any. The renderer may request this URL to show the developer the source of the error
+
+* `startLine` The base line number to use for error reporting
 
 #### Returns
 True on successful; otherwise false
