@@ -34,7 +34,7 @@ const FeatureList = [
     Svg: "img/powered-by-qt.svg",
     title: (
       <Translate id="index.FeatureList.poweredByQtTitle">
-        Powered by Qt
+        Powered by Qt & CEF
       </Translate>
     ),
     description: (

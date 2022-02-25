@@ -215,7 +215,7 @@
     "message": "支持多平台架构，让你的App以一份前端代码运行于全部主流桌面端，Windows/macOS/Linux全平台支持."
   },
   "index.FeatureList.poweredByQtTitle": {
-    "message": "由Qt提供支持"
+    "message": "由Qt和CEF提供支持"
   },
   "index.FeatureList.poweredByQtDesc": {
     "message": "像使用其他任何Widget一样在Qt框架中使用CEF开发混合架构应用，无需了解CEF丰富繁杂的架构和接口."
