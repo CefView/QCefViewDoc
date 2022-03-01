@@ -371,8 +371,11 @@ Gets called on invoking method request from web content(Javascript)
 Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e) returned
 
 #### Parameters
-* `browserId` 
-* `frameId` 
-* `context` 
-* `result`
+* `browserId` The browser id
+
+* `frameId` The frame id
+
+* `context` The context
+
+* `result` The result
 
