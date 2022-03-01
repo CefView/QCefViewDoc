@@ -2,7 +2,7 @@
 title: QCefQuery
 ---
 
-# class `QCefQuery` <a class="anchor" id="class_q_cef_query"></a>
+# class `QCefQuery` <a id="class_q_cef_query" class="anchor"></a>
 
 Represents the query request sent from the web content(Javascript)
 
@@ -21,17 +21,16 @@ Represents the query request sent from the web content(Javascript)
 `public const bool `[`result`](#class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2)`() const` | Gets the response result
 `public const int `[`error`](#class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8)`() const` | Gets the response error
 `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success,const QString & response,int error) const` | Sets the response
-`private QScopedPointer< QCefQueryPrivate > `[`d_ptr`](#class_q_cef_query_1a3e84c15339bbf841b91a541222aed4e6) | 
 
 ## Members
 
 ---
-### `public  `[`QCefQuery`](#class_q_cef_query_1a22d9fddcadce7a6e0259c691634c4d7a)`()` <a class="anchor" id="class_q_cef_query_1a22d9fddcadce7a6e0259c691634c4d7a"></a>
+### `public  `[`QCefQuery`](#class_q_cef_query_1a22d9fddcadce7a6e0259c691634c4d7a)`()` <a id="class_q_cef_query_1a22d9fddcadce7a6e0259c691634c4d7a" class="anchor"></a>
 
 Constructs a query instance
 
 ---
-### `public  `[`QCefQuery`](#class_q_cef_query_1a4371b3245657bf41312aead3a88cbe33)`(const QString & req,const int64_t query)` <a class="anchor" id="class_q_cef_query_1a4371b3245657bf41312aead3a88cbe33"></a>
+### `public  `[`QCefQuery`](#class_q_cef_query_1a4371b3245657bf41312aead3a88cbe33)`(const QString & req,const int64_t query)` <a id="class_q_cef_query_1a4371b3245657bf41312aead3a88cbe33" class="anchor"></a>
 
 Constructs a query instance with request context and query id
 
@@ -41,7 +40,7 @@ Constructs a query instance with request context and query id
 * `query` The query id
 
 ---
-### `public  `[`QCefQuery`](#class_q_cef_query_1a15297bbfd653f64aa48cec2347562b9e)`(const `[`QCefQuery`](#class_q_cef_query)` & other)` <a class="anchor" id="class_q_cef_query_1a15297bbfd653f64aa48cec2347562b9e"></a>
+### `public  `[`QCefQuery`](#class_q_cef_query_1a15297bbfd653f64aa48cec2347562b9e)`(const `[`QCefQuery`](#class_q_cef_query)` & other)` <a id="class_q_cef_query_1a15297bbfd653f64aa48cec2347562b9e" class="anchor"></a>
 
 Constructs a query instance from existing one
 
@@ -49,7 +48,7 @@ Constructs a query instance from existing one
 * `other` The other query instance
 
 ---
-### `public `[`QCefQuery`](#class_q_cef_query)` & `[`operator=`](#class_q_cef_query_1adb304235ed62a9cac92338a415bfb058)`(const `[`QCefQuery`](#class_q_cef_query)` & other)` <a class="anchor" id="class_q_cef_query_1adb304235ed62a9cac92338a415bfb058"></a>
+### `public `[`QCefQuery`](#class_q_cef_query)` & `[`operator=`](#class_q_cef_query_1adb304235ed62a9cac92338a415bfb058)`(const `[`QCefQuery`](#class_q_cef_query)` & other)` <a id="class_q_cef_query_1adb304235ed62a9cac92338a415bfb058" class="anchor"></a>
 
 Assigns an existing query instance to current
 
@@ -57,12 +56,12 @@ Assigns an existing query instance to current
 * `other` The other query instance
 
 ---
-### `public  `[`~QCefQuery`](#class_q_cef_query_1a402d117cbd2d37681394f86d31ed11a3)`()` <a class="anchor" id="class_q_cef_query_1a402d117cbd2d37681394f86d31ed11a3"></a>
+### `public  `[`~QCefQuery`](#class_q_cef_query_1a402d117cbd2d37681394f86d31ed11a3)`()` <a id="class_q_cef_query_1a402d117cbd2d37681394f86d31ed11a3" class="anchor"></a>
 
 Destructs a query instance
 
 ---
-### `public const QString `[`request`](#class_q_cef_query_1a16d137bcc1bf2ef9bc8969ff1bd091e7)`() const` <a class="anchor" id="class_q_cef_query_1a16d137bcc1bf2ef9bc8969ff1bd091e7"></a>
+### `public const QString `[`request`](#class_q_cef_query_1a16d137bcc1bf2ef9bc8969ff1bd091e7)`() const` <a id="class_q_cef_query_1a16d137bcc1bf2ef9bc8969ff1bd091e7" class="anchor"></a>
 
 Gets the query content
 
@@ -70,7 +69,7 @@ Gets the query content
 The content string
 
 ---
-### `public const int64_t `[`id`](#class_q_cef_query_1afa08eaa6e1957219028db0256edd5d46)`() const` <a class="anchor" id="class_q_cef_query_1afa08eaa6e1957219028db0256edd5d46"></a>
+### `public const int64_t `[`id`](#class_q_cef_query_1afa08eaa6e1957219028db0256edd5d46)`() const` <a id="class_q_cef_query_1afa08eaa6e1957219028db0256edd5d46" class="anchor"></a>
 
 Gets the query id
 
@@ -78,7 +77,7 @@ Gets the query id
 The query id
 
 ---
-### `public const QString `[`response`](#class_q_cef_query_1a663d5945146bebe69a0a3c5448bb9280)`() const` <a class="anchor" id="class_q_cef_query_1a663d5945146bebe69a0a3c5448bb9280"></a>
+### `public const QString `[`response`](#class_q_cef_query_1a663d5945146bebe69a0a3c5448bb9280)`() const` <a id="class_q_cef_query_1a663d5945146bebe69a0a3c5448bb9280" class="anchor"></a>
 
 Gets the response content string
 
@@ -86,7 +85,7 @@ Gets the response content string
 The response content string
 
 ---
-### `public const bool `[`result`](#class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2)`() const` <a class="anchor" id="class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2"></a>
+### `public const bool `[`result`](#class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2)`() const` <a id="class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2" class="anchor"></a>
 
 Gets the response result
 
@@ -94,7 +93,7 @@ Gets the response result
 The respone result
 
 ---
-### `public const int `[`error`](#class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8)`() const` <a class="anchor" id="class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8"></a>
+### `public const int `[`error`](#class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8)`() const` <a id="class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8" class="anchor"></a>
 
 Gets the response error
 
@@ -102,7 +101,7 @@ Gets the response error
 The response error
 
 ---
-### `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success,const QString & response,int error) const` <a class="anchor" id="class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28"></a>
+### `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success,const QString & response,int error) const` <a id="class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28" class="anchor"></a>
 
 Sets the response
 
@@ -112,7 +111,4 @@ Sets the response
 * `response` The response content string
 
 * `error` The response error
-
----
-### `private QScopedPointer< QCefQueryPrivate > `[`d_ptr`](#class_q_cef_query_1a3e84c15339bbf841b91a541222aed4e6) <a class="anchor" id="class_q_cef_query_1a3e84c15339bbf841b91a541222aed4e6"></a>
 
