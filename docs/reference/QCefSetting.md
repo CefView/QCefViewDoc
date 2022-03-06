@@ -52,12 +52,6 @@ Represents the settings for individual browser
 `public const QVariant `[`javascriptDomPaste`](#class_q_cef_setting_1a6696cc8fa0b4ea1ef14d71259cd4350d)`() const` | Gets whether to enable or disable the permission of pasting DOM in Javascript
 `public void `[`setPlugins`](#class_q_cef_setting_1afd5813a87ece2924265a90544885e2c0)`(const bool value)` | Sets to enable or disable plugins
 `public const QVariant `[`plugins`](#class_q_cef_setting_1a99c3a6c649171d42402af815f6628f03)`() const` | Gets whether to enable or disable plugins
-`public void `[`setUniversalAccessFromFileUrls`](#class_q_cef_setting_1ad416f5587b641d8d7b054d78375ab6d3)`(const bool value)` | Sets to enable or disable the permission of universal access from file urls
-`public const QVariant `[`universalAccessFromFileUrls`](#class_q_cef_setting_1af74c9c31d6c8d85314c2ccebbf42ffa2)`() const` | Gets whether to enable or disable the permission of universal access from file urls
-`public void `[`setFileAccessFromFileUrls`](#class_q_cef_setting_1ad3a48fa0552fa9fd43c43d0b80268a8f)`(const bool value)` | Sets to enable or disable the permission of file access from file urls
-`public const QVariant `[`fileAccessFromFileUrls`](#class_q_cef_setting_1a1512445dbcc98fbf12030ac519a5f9df)`() const` | Gets whether to enable or disable the permission of file access from file urls
-`public void `[`setWebSecurity`](#class_q_cef_setting_1aa4f2887c0e0998a28ca064e4015d9180)`(const bool value)` | Sets to enable or disable web security
-`public const QVariant `[`webSecurity`](#class_q_cef_setting_1ab1f3f2da5c2eac8dc344ba2bdfff8360)`() const` | Gets whether to enable or disable web security
 `public void `[`setImageLoading`](#class_q_cef_setting_1a15457b991b298a722cbc9f9507d109fb)`(const bool value)` | Sets to enable or disable the permission of loading images
 `public const QVariant `[`imageLoading`](#class_q_cef_setting_1aa06779c82a28a01bd862ac605356be40)`() const` | Gets whether to enable or disable the permission of loading images
 `public void `[`setImageShrinkStandaloneToFit`](#class_q_cef_setting_1a562e4477613234a906b2d167473b0627)`(const bool value)` | Sets to enable or disable the shrinking image standalone to fit
@@ -70,8 +64,6 @@ Represents the settings for individual browser
 `public const QVariant `[`localStorage`](#class_q_cef_setting_1a4fffdf46c7617f7b116e2e836dbb48d0)`() const` | Gets whether to enable or disable local storage
 `public void `[`setDatabases`](#class_q_cef_setting_1ad0680b646641dd568b7de8ae072670db)`(const bool value)` | Sets to enable or disable database
 `public const QVariant `[`databases`](#class_q_cef_setting_1a94b2a957c8754619df7a37258a41c31d)`() const` | Gets whether to enable or disable database
-`public void `[`setApplicationCache`](#class_q_cef_setting_1aee475be805902aea5a3c6f54ab57b09d)`(const bool value)` | Sets to enable or disable application cache
-`public const QVariant `[`applicationCache`](#class_q_cef_setting_1a2f835f2073689be41641d5da6690b604)`() const` | Gets whether to enable or disable application cache
 `public void `[`setWebGL`](#class_q_cef_setting_1a984a074332bd07b78da2079d1d333209)`(const bool value)` | Sets to enable or disable webGL
 `public const QVariant `[`webGL`](#class_q_cef_setting_1aca84c981db4fcc2cf6aa3ece7c44973c)`() const` | Gets whether to enable or disable webGL
 `public void `[`setBackgroundColor`](#class_q_cef_setting_1a6dbd7b1da3a151294e8bf020a16687be)`(const QColor & value)` | Sets the background color
@@ -410,54 +402,6 @@ Gets whether to enable or disable plugins
 True to enalbe; false to disable
 
 ---
-### `public void `[`setUniversalAccessFromFileUrls`](#class_q_cef_setting_1ad416f5587b641d8d7b054d78375ab6d3)`(const bool value)` <a id="class_q_cef_setting_1ad416f5587b641d8d7b054d78375ab6d3" class="anchor"></a>
-
-Sets to enable or disable the permission of universal access from file urls
-
-#### Parameters
-* `value` True to enalbe; false to disable
-
----
-### `public const QVariant `[`universalAccessFromFileUrls`](#class_q_cef_setting_1af74c9c31d6c8d85314c2ccebbf42ffa2)`() const` <a id="class_q_cef_setting_1af74c9c31d6c8d85314c2ccebbf42ffa2" class="anchor"></a>
-
-Gets whether to enable or disable the permission of universal access from file urls
-
-#### Returns
-True to enalbe; false to disable
-
----
-### `public void `[`setFileAccessFromFileUrls`](#class_q_cef_setting_1ad3a48fa0552fa9fd43c43d0b80268a8f)`(const bool value)` <a id="class_q_cef_setting_1ad3a48fa0552fa9fd43c43d0b80268a8f" class="anchor"></a>
-
-Sets to enable or disable the permission of file access from file urls
-
-#### Parameters
-* `value` True to enalbe; false to disable
-
----
-### `public const QVariant `[`fileAccessFromFileUrls`](#class_q_cef_setting_1a1512445dbcc98fbf12030ac519a5f9df)`() const` <a id="class_q_cef_setting_1a1512445dbcc98fbf12030ac519a5f9df" class="anchor"></a>
-
-Gets whether to enable or disable the permission of file access from file urls
-
-#### Returns
-True to enalbe; false to disable
-
----
-### `public void `[`setWebSecurity`](#class_q_cef_setting_1aa4f2887c0e0998a28ca064e4015d9180)`(const bool value)` <a id="class_q_cef_setting_1aa4f2887c0e0998a28ca064e4015d9180" class="anchor"></a>
-
-Sets to enable or disable web security
-
-#### Parameters
-* `value` True to enalbe; false to disable
-
----
-### `public const QVariant `[`webSecurity`](#class_q_cef_setting_1ab1f3f2da5c2eac8dc344ba2bdfff8360)`() const` <a id="class_q_cef_setting_1ab1f3f2da5c2eac8dc344ba2bdfff8360" class="anchor"></a>
-
-Gets whether to enable or disable web security
-
-#### Returns
-True to enalbe; false to disable
-
----
 ### `public void `[`setImageLoading`](#class_q_cef_setting_1a15457b991b298a722cbc9f9507d109fb)`(const bool value)` <a id="class_q_cef_setting_1a15457b991b298a722cbc9f9507d109fb" class="anchor"></a>
 
 Sets to enable or disable the permission of loading images
@@ -549,22 +493,6 @@ Sets to enable or disable database
 ### `public const QVariant `[`databases`](#class_q_cef_setting_1a94b2a957c8754619df7a37258a41c31d)`() const` <a id="class_q_cef_setting_1a94b2a957c8754619df7a37258a41c31d" class="anchor"></a>
 
 Gets whether to enable or disable database
-
-#### Returns
-True to enalbe; false to disable
-
----
-### `public void `[`setApplicationCache`](#class_q_cef_setting_1aee475be805902aea5a3c6f54ab57b09d)`(const bool value)` <a id="class_q_cef_setting_1aee475be805902aea5a3c6f54ab57b09d" class="anchor"></a>
-
-Sets to enable or disable application cache
-
-#### Parameters
-* `value` True to enalbe; false to disable
-
----
-### `public const QVariant `[`applicationCache`](#class_q_cef_setting_1a2f835f2073689be41641d5da6690b604)`() const` <a id="class_q_cef_setting_1a2f835f2073689be41641d5da6690b604" class="anchor"></a>
-
-Gets whether to enable or disable application cache
 
 #### Returns
 True to enalbe; false to disable
