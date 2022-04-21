@@ -68,6 +68,7 @@ Represents the settings for individual browser
 `public const QVariant `[`webGL`](#class_q_cef_setting_1aca84c981db4fcc2cf6aa3ece7c44973c)`() const` | Gets whether to enable or disable webGL
 `public void `[`setBackgroundColor`](#class_q_cef_setting_1a6dbd7b1da3a151294e8bf020a16687be)`(const QColor & value)` | Sets the background color
 `public const QVariant `[`backgroundColor`](#class_q_cef_setting_1a9db276640c98e1d5d38290e06ae17d1a)`() const` | Gets the background color
+ | 
 
 ## Members
 
@@ -528,4 +529,7 @@ Gets the background color
 
 #### Returns
 The color
+
+---
+###  <a id="class_q_cef_setting_1ab47508d9301964f7c77c49150d942813" class="anchor"></a>
 

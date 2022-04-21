@@ -19,6 +19,7 @@ Represents the event sent from native context(C/C++ code) to the web context(jav
 `public const QString `[`eventName`](#class_q_cef_event_1a5a970c76a348788b15a040c8c405a103)`() const` | Gets the event name
 `public void `[`setArguments`](#class_q_cef_event_1ac84ba1292bcf56abdc5c6c4245aa6c04)`(const QVariantList & args)` | Sets the argument list
 `public QVariantList & `[`arguments`](#class_q_cef_event_1a4cf70fa60235d723b9e578cded919327)`()` | Gets the argument list
+ | 
 
 ## Members
 
@@ -87,4 +88,7 @@ Gets the argument list
 
 #### Returns
 The argument list
+
+---
+###  <a id="class_q_cef_event_1aa4e043ac8c5d7c5d75ca878ca75ab017" class="anchor"></a>
 

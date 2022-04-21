@@ -21,6 +21,7 @@ Represents the query request sent from the web content(Javascript)
 `public const bool `[`result`](#class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2)`() const` | Gets the response result
 `public const int `[`error`](#class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8)`() const` | Gets the response error
 `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success,const QString & response,int error) const` | Sets the response
+ | 
 
 ## Members
 
@@ -111,4 +112,7 @@ Sets the response
 * `response` The response content string
 
 * `error` The response error
+
+---
+###  <a id="class_q_cef_query_1a3e84c15339bbf841b91a541222aed4e6" class="anchor"></a>
 

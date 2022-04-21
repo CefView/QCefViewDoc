@@ -10,10 +10,12 @@ Represents the CEF setting. For more details please refer to: [https://bitbucket
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public  `[`QCefConfig`](#class_q_cef_config_1a74b25fcd62cfe7cc4ab262cd890271bb)`(int argc,char * argv)` | Constructs a CEF config instance
+`public  `[`QCefConfig`](#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412)`()` | Constructs a CEF config instance
 `public  `[`QCefConfig`](#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` | Constructs a CEF setting from existing one
 `public `[`QCefConfig`](#class_q_cef_config)` & `[`operator=`](#class_q_cef_config_1a2f78eccb1b7463db2c0b174aff5d0553)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` | Assigns an existing config to current
 `public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()` | Destructs the config
+`public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)` | Adds a switch to the commandline args used to initialize the CEF
+`public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch,const QString & v)` | Adds a switch with value to the commandline args used to initialize the CEF
 `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)` | Sets the browser subprocess path
 `public const QString `[`browserSubProcessPath`](#class_q_cef_config_1a2b15417d6066479256fc514721cd0474)`() const` | Gets the browser subprocess path
 `public void `[`setResourceDirectoryPath`](#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42)`(const QString & path)` | Sets the resource directory path
@@ -43,18 +45,14 @@ Represents the CEF setting. For more details please refer to: [https://bitbucket
 `public void `[`setRemoteDebuggingPort`](#class_q_cef_config_1ac502d5e4b911c4e57d6fe4167be6d801)`(short port)` | Sets the remote debugging port
 `public const QVariant `[`remoteDebuggingPort`](#class_q_cef_config_1aeaa7b37b83ee32a5ec50a1dec11d0c2e)`() const` | Gets the remote debugging port
 `enum `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c) | Represents the log severity
+ | 
 
 ## Members
 
 ---
-### `public  `[`QCefConfig`](#class_q_cef_config_1a74b25fcd62cfe7cc4ab262cd890271bb)`(int argc,char * argv)` <a id="class_q_cef_config_1a74b25fcd62cfe7cc4ab262cd890271bb" class="anchor"></a>
+### `public  `[`QCefConfig`](#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412)`()` <a id="class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412" class="anchor"></a>
 
 Constructs a CEF config instance
-
-#### Parameters
-* `argc` The application arguments count
-
-* `argv` The application arguments list
 
 ---
 ### `public  `[`QCefConfig`](#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` <a id="class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516" class="anchor"></a>
@@ -70,6 +68,24 @@ Assigns an existing config to current
 ### `public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()` <a id="class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a" class="anchor"></a>
 
 Destructs the config
+
+---
+### `public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)` <a id="class_q_cef_config_1a2873f9e8e8997db4060348418df16632" class="anchor"></a>
+
+Adds a switch to the commandline args used to initialize the CEF
+
+#### Parameters
+* `smitch` The switch name
+
+---
+### `public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch,const QString & v)` <a id="class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5" class="anchor"></a>
+
+Adds a switch with value to the commandline args used to initialize the CEF
+
+#### Parameters
+* `smitch` The swtich name
+
+* `v` The switch value
 
 ---
 ### `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)` <a id="class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82" class="anchor"></a>
@@ -225,7 +241,7 @@ Get the acceptable language list
 Sets whether to persist session cookie
 
 #### Parameters
-* `enabled` True if to perssit session cookie
+* `enabled` True if to persist session cookie
 
 ---
 ### `public const QVariant `[`persistSessionCookies`](#class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c)`() const` <a id="class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c" class="anchor"></a>
@@ -263,6 +279,8 @@ Gets the remote debugging port
 ---
 ### `enum `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c) <a id="class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c" class="anchor"></a>
 
+Represents the log severity
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 LOGSEVERITY_DEFAULT            | Default logging (currently INFO logging)
@@ -274,5 +292,6 @@ LOGSEVERITY_ERROR            | ERROR logging.
 LOGSEVERITY_FATAL            | FATAL logging.
 LOGSEVERITY_DISABLE            | Disable logging to file for all messages, and to stderr for messages with severity less than FATAL.
 
-Represents the log severity
+---
+###  <a id="class_q_cef_config_1ab524eb236e2915eabee11aa49124a0fc" class="anchor"></a>
 
