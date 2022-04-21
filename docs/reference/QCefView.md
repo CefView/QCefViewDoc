@@ -61,7 +61,7 @@ Represents the CEF browser view
 `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1abd1ab9ca8c22afb4030882f5fcec283f)`(int browserId,int64_t frameId,const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | Gets called on new [QCefQuery](QCefQuery.md#class_q_cef_query) request
 `{signal} public void `[`invokeMethod`](#class_q_cef_view_1a05c08a545ca6f1b52d8a4ff2c289814d)`(int browserId,int64_t frameId,const QString & method,const QVariantList & arguments)` | Gets called on invoking method request from web content(Javascript)
 `{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a2da5836b810057180e8a0cc86a09be84)`(int browserId,int64_t frameId,int64_t context,const QVariant & result)` | Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e) returned
-`{slot} public virtual bool `[`onBeforPopup`](#class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6)`(int64_t frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` | Gets called before the popup browser created
+`{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6)`(int64_t frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` | Gets called before the popup browser created
 `{slot} public virtual void `[`onPopupCreated`](#class_q_cef_view_1aac12eb50ad220fa9ca1cd674ac471a9c)`(QWindow * wnd)` | Gets called right after the popup browser was created
 `enum `[`WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d) | 
  | 
@@ -456,7 +456,7 @@ Gets called on the result of the javascript executed with [executeJavascriptWith
 * `result` The result
 
 ---
-### `{slot} public virtual bool `[`onBeforPopup`](#class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6)`(int64_t frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` <a id="class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6" class="anchor"></a>
+### `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6)`(int64_t frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` <a id="class_q_cef_view_1a99dc47ca5e7f38f8ce39f767747349e6" class="anchor"></a>
 
 Gets called before the popup browser created
 
