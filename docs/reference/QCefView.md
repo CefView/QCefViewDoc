@@ -49,10 +49,10 @@ Represents the CEF browser view
 `protected void `[`mousePressEvent`](#class_q_cef_view_1aac476c39493a4e75e681b9e09f13e060)`(QMouseEvent * event)` | Please refer to QWidget::mousePressEvent
 `protected void `[`mouseReleaseEvent`](#class_q_cef_view_1a69306a82128ba3e525103eb132aae62c)`(QMouseEvent * event)` | Please refer to QWidget::mouseReleaseEvent
 `protected void `[`wheelEvent`](#class_q_cef_view_1a3395f62959288420a834c736933e7228)`(QWheelEvent * event)` | Please refer to QWidget::wheelEvent
-`{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1a3a7a88f6705481605cef678c111a6cf5)`(bool isLoading,bool canGoBack,bool canGoForward)` | Gets called on loading state changed
-`{signal} public void `[`loadStart`](#class_q_cef_view_1a74964d85e3318a693e9d93a24176fb7c)`()` | Gets called on loading starts
-`{signal} public void `[`loadEnd`](#class_q_cef_view_1ab09aca25ea627999b77c951c804c9a68)`(int httpStatusCode)` | Gets called on loading ends
-`{signal} public void `[`loadError`](#class_q_cef_view_1a500199d0690238f89a71831cb7360459)`(int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` | Gets called on loading failed due to error
+`{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5)`(int browserId,bool isLoading,bool canGoBack,bool canGoForward)` | Gets called on loading state changed
+`{signal} public void `[`loadStart`](#class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6)`(int browserId,int frameId,bool frameIsMain,int transition_type)` | Gets called on loading starts
+`{signal} public void `[`loadEnd`](#class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7)`(int browserId,int frameId,bool frameIsMain,int httpStatusCode)` | Gets called on loading ends
+`{signal} public void `[`loadError`](#class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013)`(int browserId,int frameId,bool frameIsMain,int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` | Gets called on loading failed due to error
 `{signal} public void `[`draggableRegionChanged`](#class_q_cef_view_1ae11274817f627abf9d407e12dcd5c050)`(const QRegion & draggableRegion,const QRegion & nonDraggableRegion)` | Gets called on draggable region changed
 `{signal} public void `[`addressChanged`](#class_q_cef_view_1a89ce3bc031d5dcd1115482118a6c4181)`(qint64 frameId,const QString & url)` | Gets called on the address changed
 `{signal} public void `[`titleChanged`](#class_q_cef_view_1a48c82c208cab769a1baa7177bc58b030)`(const QString & title)` | Gets called on title changed
@@ -327,11 +327,13 @@ Please refer to QWidget::mouseReleaseEvent
 Please refer to QWidget::wheelEvent
 
 ---
-### `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1a3a7a88f6705481605cef678c111a6cf5)`(bool isLoading,bool canGoBack,bool canGoForward)` <a id="class_q_cef_view_1a3a7a88f6705481605cef678c111a6cf5" class="anchor"></a>
+### `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5)`(int browserId,bool isLoading,bool canGoBack,bool canGoForward)` <a id="class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5" class="anchor"></a>
 
 Gets called on loading state changed
 
 #### Parameters
+* `browserId` Indicates the browser id
+
 * `isLoading` Indicates the browser is loading
 
 * `canGoBack` Indicates the browser can go back
@@ -339,24 +341,45 @@ Gets called on loading state changed
 * `canGoForward` Indicates the browser can go forward
 
 ---
-### `{signal} public void `[`loadStart`](#class_q_cef_view_1a74964d85e3318a693e9d93a24176fb7c)`()` <a id="class_q_cef_view_1a74964d85e3318a693e9d93a24176fb7c" class="anchor"></a>
+### `{signal} public void `[`loadStart`](#class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6)`(int browserId,int frameId,bool frameIsMain,int transition_type)` <a id="class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6" class="anchor"></a>
 
 Gets called on loading starts
 
+#### Parameters
+* `browserId` Indicates the browser id
+
+* `frameId` Indicates the frame id
+
+* `frameIsMain` Indicates the whether this is the main frame
+
+* `transition_type` transition type
+
 ---
-### `{signal} public void `[`loadEnd`](#class_q_cef_view_1ab09aca25ea627999b77c951c804c9a68)`(int httpStatusCode)` <a id="class_q_cef_view_1ab09aca25ea627999b77c951c804c9a68" class="anchor"></a>
+### `{signal} public void `[`loadEnd`](#class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7)`(int browserId,int frameId,bool frameIsMain,int httpStatusCode)` <a id="class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7" class="anchor"></a>
 
 Gets called on loading ends
 
 #### Parameters
-* `httpStatusCode`
+* `browserId` Indicates the browser id
+
+* `frameId` Indicates the frame id
+
+* `frameIsMain` Indicates the whether this is the main frame
+
+* `httpStatusCode` The HTTP status code
 
 ---
-### `{signal} public void `[`loadError`](#class_q_cef_view_1a500199d0690238f89a71831cb7360459)`(int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` <a id="class_q_cef_view_1a500199d0690238f89a71831cb7360459" class="anchor"></a>
+### `{signal} public void `[`loadError`](#class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013)`(int browserId,int frameId,bool frameIsMain,int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` <a id="class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013" class="anchor"></a>
 
 Gets called on loading failed due to error
 
 #### Parameters
+* `browserId` Indicates the browser id
+
+* `frameId` Indicates the frame id
+
+* `frameIsMain` Indicates the whether this is the main frame
+
 * `errorCode` The error code
 
 * `errorMsg` The error message
