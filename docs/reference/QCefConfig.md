@@ -202,7 +202,7 @@ Sets the bridge object name
 #### Parameters
 * `name` The bridge object name
 
-The bridge object represents a Javascript object which will be inserted into all browser and frames. This object is designated for communicating between Javascript in web content and native context(C/C++) code. This object is set as an property of window object. That means it can be obtained by calling window.bridgeObject in the Javascript code.
+The bridge object represents a Javascript object which will be inserted into all browser and frames. This object is designated for communicating between Javascript in web content and native context(C/C++) code. This object is set as an property of window object. That means it can be obtained by calling window.bridgeObject in the Javascript code
 
 ---
 ### `public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const` <a id="class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35" class="anchor"></a>
@@ -216,6 +216,8 @@ Sets the background color of the web page
 
 #### Parameters
 * `color` The color to be set
+
+This only works if the web page has no background color set. The alpha component value will be adjusted to 0 or 255, it means if you pass a value with alpha value in the range of [1, 255], it will be accepted as 255.
 
 ---
 ### `public const QVariant `[`backgroundColor`](#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)`() const` <a id="class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b" class="anchor"></a>

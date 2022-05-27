@@ -522,6 +522,8 @@ Sets the background color
 #### Parameters
 * `value` The color
 
+This only works if the web page has no background color set. The alpha component value will be adjusted to 0 or 255, it means if you pass a value with alpha value in the range of [1, 255], it will be accepted as 255. The default value is inherited from [QCefConfig.backgroundColor()](QCefConfig.md#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)
+
 ---
 ### `public const QVariant `[`backgroundColor`](#class_q_cef_setting_1a9db276640c98e1d5d38290e06ae17d1a)`() const` <a id="class_q_cef_setting_1a9db276640c98e1d5d38290e06ae17d1a" class="anchor"></a>
 
