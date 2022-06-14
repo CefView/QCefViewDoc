@@ -37,10 +37,10 @@ export QTDIR=/usr/share/Qt/6.2.2/gcc_64
 ### Windows
 ```bash
 # Generate VS projects
-generate-win-proj.bat
+generate-win-x86_64.bat
 
 # Build from cmake
-cmake --build .build/Windows
+cmake --build .build/windows.x86_64
 ```
 
 生成项目之后也可以在目录`.build/Windows`中找到Visual Studio项目文件，使用Visual Studio打开和编译。
@@ -48,10 +48,10 @@ cmake --build .build/Windows
 ### macOS
 ```bash
 # Generate Xcode project
-./generate-mac-proj.sh
+./generate-mac-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/macOS
+cmake --build ./build/macos.x86_64
 ```
 
 生成项目之后也可以在目录`.build/macOS`中找到Xcode项目文件，使用Xcode打开和编译。
@@ -59,10 +59,10 @@ cmake --build ./build/macOS
 ### Linux 
 ```bash
 # Generate Unix Make file project
-./generate-linux-proj.sh
+./generate-linux-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/Linux
+cmake --build ./build/linux.x86_64
 ```
 
 Linux平台推荐使用Qt Creator作为IDE。

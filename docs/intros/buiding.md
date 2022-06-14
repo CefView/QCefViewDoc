@@ -36,10 +36,10 @@ Just check out the repo from [https://github.com/CefView/QCefView](https://githu
 ### Windows
 ```bash
 # Generate VS projects
-generate-win-proj.bat
+generate-win-x86_64.bat
 
 # Build from cmake
-cmake --build .build/Windows
+cmake --build .build/windows.x86_64
 ```
 
 Find the project file in folder .build /Windows, you can also open the project with Visual Studio and build it.
@@ -47,10 +47,10 @@ Find the project file in folder .build /Windows, you can also open the project w
 ### macOS
 ```bash
 # Generate Xcode project
-./generate-mac-proj.sh
+./generate-mac-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/macOS
+cmake --build ./build/macos.x86_64
 ```
 
 Find the project file in folder .build /macOS, you can also open the project with Xcode and build it.
@@ -58,10 +58,10 @@ Find the project file in folder .build /macOS, you can also open the project wit
 ### Linux 
 ```bash
 # Generate Unix Make file project
-./generate-linux-proj.sh
+./generate-linux-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/Linux
+cmake --build ./build/linux-x86_64
 ```
 
 On Linux platform, Qt Creator is recommended as the IDE.
