@@ -17,8 +17,8 @@ Represents the CEF context
 --------------------------------|---------------------------------------------
 `public  `[`QCefContext`](#class_q_cef_context_1aa2b8af8d2d806ba8b5110e868d314c8c)`(QCoreApplication * app,int argc,char ** argv,const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * config)` | Constructs the CEF context
 `public  `[`~QCefContext`](#class_q_cef_context_1a91de7d9c36aafdaca390a355d6da5c6d)`()` | Destructs the CEF context
-`public void `[`addLocalFolderResource`](#class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454)`(const QString & path,const QString & url,int priority)` | Adds a url mapping item with local web resource directory
-`public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path,const QString & url,const QString & password,int priority)` | Adds a url mapping item with local archive (.zip) file which contains the web resource
+`public void `[`addLocalFolderResource`](#class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454)`(const QString & path,const QString & url,int priority)` | Adds a url mapping item with local web resource directory. This works for all  instances created subsequently
+`public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path,const QString & url,const QString & password,int priority)` | Adds a url mapping item with local archive (.zip) file which contains the web resource. This works for all  instances created subsequently
 `public bool `[`addCookie`](#class_q_cef_context_1a6d2e90de7fb5fcf2b7e7a6581d26e62c)`(const QString & name,const QString & value,const QString & domain,const QString & url)` | Adds a cookie to the CEF context, this cookie is accessible from all browsers created with this context
 `public const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * `[`cefConfig`](#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e)`() const` | Gets the [QCefConfig](QCefConfig.md#class_q_cef_config)
 `protected bool `[`init`](#class_q_cef_context_1a78836c8d4d2bdf4970a256d8d29c80c6)`(const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * config)` | Initialize the CEF context
@@ -50,7 +50,7 @@ Destructs the CEF context
 ---
 ### `public void `[`addLocalFolderResource`](#class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454)`(const QString & path,const QString & url,int priority)` <a id="class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454" class="anchor"></a>
 
-Adds a url mapping item with local web resource directory
+Adds a url mapping item with local web resource directory. This works for all  instances created subsequently
 
 #### Parameters
 * `path` The path to the local resource directory
@@ -62,7 +62,7 @@ Adds a url mapping item with local web resource directory
 ---
 ### `public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path,const QString & url,const QString & password,int priority)` <a id="class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6" class="anchor"></a>
 
-Adds a url mapping item with local archive (.zip) file which contains the web resource
+Adds a url mapping item with local archive (.zip) file which contains the web resource. This works for all  instances created subsequently
 
 #### Parameters
 * `path` The path to the local archive file

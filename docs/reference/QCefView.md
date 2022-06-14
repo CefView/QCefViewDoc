@@ -18,6 +18,8 @@ Represents the CEF browser view
 `public  `[`QCefView`](#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1)`(const QString url,const `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` * setting,QWidget * parent)` | Constructs a [QCefView](#class_q_cef_view) instance
 `public  `[`QCefView`](#class_q_cef_view_1a1b95ed3b73d10ee1580eea191d085c68)`(QWidget * parent)` | Constructs a [QCefView](#class_q_cef_view) instance
 `public  `[`~QCefView`](#class_q_cef_view_1a70903dca8ccd3e2776d68742531177fd)`()` | Destructs the [QCefView](#class_q_cef_view) instance
+`public void `[`addLocalFolderResource`](#class_q_cef_view_1a8c6286b279094a691832fc89b93c75f1)`(const QString & path,const QString & url,int priority)` | Adds a url mapping item with local web resource directory
+`public void `[`addArchiveResource`](#class_q_cef_view_1a503148f8ff5ca5b28d3f0e123bf5bf76)`(const QString & path,const QString & url,const QString & password,int priority)` | Adds a url mapping item with local archive (.zip) file which contains the web resource
 `public int `[`browserId`](#class_q_cef_view_1ae4aa1652bf9852ed744dd38487bbb748)`()` | Gets the browser id
 `public void `[`navigateToString`](#class_q_cef_view_1ac3b8ec3b088422a67f93fc580047a1a0)`(const QString & content)` | Navigates to the content.
 `public void `[`navigateToUrl`](#class_q_cef_view_1a4bf036d5a7d128d4c1487afaa0393d5b)`(const QString & url)` | Navigates to the URL
@@ -96,6 +98,32 @@ Constructs a [QCefView](#class_q_cef_view) instance
 ### `public  `[`~QCefView`](#class_q_cef_view_1a70903dca8ccd3e2776d68742531177fd)`()` <a id="class_q_cef_view_1a70903dca8ccd3e2776d68742531177fd" class="anchor"></a>
 
 Destructs the [QCefView](#class_q_cef_view) instance
+
+---
+### `public void `[`addLocalFolderResource`](#class_q_cef_view_1a8c6286b279094a691832fc89b93c75f1)`(const QString & path,const QString & url,int priority)` <a id="class_q_cef_view_1a8c6286b279094a691832fc89b93c75f1" class="anchor"></a>
+
+Adds a url mapping item with local web resource directory
+
+#### Parameters
+* `path` The path to the local resource directory
+
+* `url` The url to be mapped to
+
+* `priority` The priority
+
+---
+### `public void `[`addArchiveResource`](#class_q_cef_view_1a503148f8ff5ca5b28d3f0e123bf5bf76)`(const QString & path,const QString & url,const QString & password,int priority)` <a id="class_q_cef_view_1a503148f8ff5ca5b28d3f0e123bf5bf76" class="anchor"></a>
+
+Adds a url mapping item with local archive (.zip) file which contains the web resource
+
+#### Parameters
+* `path` The path to the local archive file
+
+* `url` The url to be mapped to
+
+* `password` The password of the archive
+
+* `priority` The priority
 
 ---
 ### `public int `[`browserId`](#class_q_cef_view_1ae4aa1652bf9852ed744dd38487bbb748)`()` <a id="class_q_cef_view_1ae4aa1652bf9852ed744dd38487bbb748" class="anchor"></a>
