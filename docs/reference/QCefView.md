@@ -29,11 +29,11 @@ Represents the CEF browser view
 `public void `[`browserReload`](#class_q_cef_view_1a45bc8cd7340ce410cf873d7296ffacf6)`()` | Requires the browser to reload
 `public void `[`browserStopLoad`](#class_q_cef_view_1afadd210f3c5cd95598b18aa158a9c16f)`()` | Requires the browser to stop load
 `public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | Triggers the event for main frame
-`public bool `[`triggerEvent`](#class_q_cef_view_1a6010cae9651b5a6bbc5cc8893dfb8e35)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event,int64_t frameId)` | Triggers the event for specified frame
+`public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event,qint64 frameId)` | Triggers the event for specified frame
 `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | Broad cast the event for all frames
 `public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
-`public bool `[`executeJavascript`](#class_q_cef_view_1a8f711487764fc58f6219bff03a3290aa)`(int64_t frameId,const QString & code,const QString & url)` | Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e)
-`public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e)`(int64_t frameId,const QString & code,const QString & url,int64_t context)` | Executes javascript code in specified frame and the result will be reported through [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) signal
+`public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId,const QString & code,const QString & url)` | Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
+`public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId,const QString & code,const QString & url,qint64 context)` | Executes javascript code in specified frame and the result will be reported through [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) signal
 `public bool `[`setPreference`](#class_q_cef_view_1a2b4b3da8874855bbe2d558081233d948)`(const QString & name,const QVariant & value,const QString & error)` | Sets the preference for this browser
 `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` | Please refer to QWidget::inputMethodQuery
 `protected void `[`paintEvent`](#class_q_cef_view_1aa205502bb5238e6e2ce727046ed8a9b8)`(QPaintEvent * event)` | Please refer to QWidget::paintEvent
@@ -50,19 +50,21 @@ Represents the CEF browser view
 `protected void `[`mouseReleaseEvent`](#class_q_cef_view_1a69306a82128ba3e525103eb132aae62c)`(QMouseEvent * event)` | Please refer to QWidget::mouseReleaseEvent
 `protected void `[`wheelEvent`](#class_q_cef_view_1a3395f62959288420a834c736933e7228)`(QWheelEvent * event)` | Please refer to QWidget::wheelEvent
 `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5)`(int browserId,bool isLoading,bool canGoBack,bool canGoForward)` | Gets called on loading state changed
-`{signal} public void `[`loadStart`](#class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6)`(int browserId,int frameId,bool frameIsMain,int transition_type)` | Gets called on loading starts
-`{signal} public void `[`loadEnd`](#class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7)`(int browserId,int frameId,bool frameIsMain,int httpStatusCode)` | Gets called on loading ends
-`{signal} public void `[`loadError`](#class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013)`(int browserId,int frameId,bool frameIsMain,int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` | Gets called on loading failed due to error
+`{signal} public void `[`loadStart`](#class_q_cef_view_1a0165da07749c09130e0007a4ceff59ca)`(int browserId,qint64 frameId,bool isMainFrame,int transition_type)` | Gets called on loading starts
+`{signal} public void `[`loadEnd`](#class_q_cef_view_1a5d64cbb95348336b85cb01f38de91e0a)`(int browserId,qint64 frameId,bool isMainFrame,int httpStatusCode)` | Gets called on loading ends
+`{signal} public void `[`loadError`](#class_q_cef_view_1a81ad0ea96d09d7ba705c4166502507e4)`(int browserId,qint64 frameId,bool isMainFrame,int errorCode,const QString & errorMsg,const QString & failedUrl)` | Gets called on loading failed due to error
 `{signal} public void `[`draggableRegionChanged`](#class_q_cef_view_1ae11274817f627abf9d407e12dcd5c050)`(const QRegion & draggableRegion,const QRegion & nonDraggableRegion)` | Gets called on draggable region changed
 `{signal} public void `[`addressChanged`](#class_q_cef_view_1a89ce3bc031d5dcd1115482118a6c4181)`(qint64 frameId,const QString & url)` | Gets called on the address changed
 `{signal} public void `[`titleChanged`](#class_q_cef_view_1a48c82c208cab769a1baa7177bc58b030)`(const QString & title)` | Gets called on title changed
+`{signal} public void `[`faviconURLChanged`](#class_q_cef_view_1a7b9e104469c1a4a203c2e1d7e9cfd2a7)`(const QStringList & urls)` | Gets called on title changed
+`{signal} public void `[`faviconChanged`](#class_q_cef_view_1aa5d4a7098414f929a4ca7dd6b72d0893)`(const QIcon & icon)` | Gets called on title changed
 `{signal} public void `[`fullscreenModeChanged`](#class_q_cef_view_1afa0fbb5b4c2c6c3592085e9b94dffc4a)`(bool fullscreen)` | Gets called on fullscreen mode changed
 `{signal} public void `[`statusMessage`](#class_q_cef_view_1a86d10c28b8821a36723e3504fa0cc7e7)`(const QString & message)` | Gets called on status message changed
 `{signal} public void `[`consoleMessage`](#class_q_cef_view_1a2dae6946082712815273c2967d37762a)`(const QString & message,int level)` | Gets called on console message from the web content
 `{signal} public void `[`loadingProgressChanged`](#class_q_cef_view_1ac7377eeed6811bafca1e6887b64d62a5)`(double progress)` | Gets called on loading progress changed
 `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId,qint64 frameId,const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | Gets called on new [QCefQuery](QCefQuery.md#class_q_cef_query) request
 `{signal} public void `[`invokeMethod`](#class_q_cef_view_1a221d07818d4f6766f72c68319fecc24e)`(int browserId,qint64 frameId,const QString & method,const QVariantList & arguments)` | Gets called on invoking method request from web content(Javascript)
-`{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId,qint64 frameId,qint64 context,const QVariant & result)` | Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e) returned
+`{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId,qint64 frameId,qint64 context,const QVariant & result)` | Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) returned
 `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a015cfe52a7ae5710ccd1a06c61044267)`(qint64 frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` | Gets called before the popup browser created
 `{slot} public virtual void `[`onPopupCreated`](#class_q_cef_view_1aac12eb50ad220fa9ca1cd674ac471a9c)`(QWindow * wnd)` | Gets called right after the popup browser was created
 `enum `[`WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d) | 
@@ -175,7 +177,7 @@ Triggers the event for main frame
 True on successful; otherwise false
 
 ---
-### `public bool `[`triggerEvent`](#class_q_cef_view_1a6010cae9651b5a6bbc5cc8893dfb8e35)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event,int64_t frameId)` <a id="class_q_cef_view_1a6010cae9651b5a6bbc5cc8893dfb8e35" class="anchor"></a>
+### `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event,qint64 frameId)` <a id="class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13" class="anchor"></a>
 
 Triggers the event for specified frame
 
@@ -210,9 +212,9 @@ Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
 True on successful; otherwise false
 
 ---
-### `public bool `[`executeJavascript`](#class_q_cef_view_1a8f711487764fc58f6219bff03a3290aa)`(int64_t frameId,const QString & code,const QString & url)` <a id="class_q_cef_view_1a8f711487764fc58f6219bff03a3290aa" class="anchor"></a>
+### `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId,const QString & code,const QString & url)` <a id="class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8" class="anchor"></a>
 
-Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e)
+Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
 
 #### Parameters
 * `frameId` The frame id
@@ -225,7 +227,7 @@ Executes javascript code in specified frame, this method does not report the res
 True on successful; otherwise false
 
 ---
-### `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e)`(int64_t frameId,const QString & code,const QString & url,int64_t context)` <a id="class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e" class="anchor"></a>
+### `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId,const QString & code,const QString & url,qint64 context)` <a id="class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065" class="anchor"></a>
 
 Executes javascript code in specified frame and the result will be reported through [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) signal
 
@@ -341,7 +343,7 @@ Gets called on loading state changed
 * `canGoForward` Indicates the browser can go forward
 
 ---
-### `{signal} public void `[`loadStart`](#class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6)`(int browserId,int frameId,bool frameIsMain,int transition_type)` <a id="class_q_cef_view_1a2b6a8242c1ef8066995b2bae8ccc69a6" class="anchor"></a>
+### `{signal} public void `[`loadStart`](#class_q_cef_view_1a0165da07749c09130e0007a4ceff59ca)`(int browserId,qint64 frameId,bool isMainFrame,int transition_type)` <a id="class_q_cef_view_1a0165da07749c09130e0007a4ceff59ca" class="anchor"></a>
 
 Gets called on loading starts
 
@@ -350,12 +352,12 @@ Gets called on loading starts
 
 * `frameId` Indicates the frame id
 
-* `frameIsMain` Indicates the whether this is the main frame
+* `isMainFrame` Indicates the whether this is the main frame
 
 * `transition_type` transition type
 
 ---
-### `{signal} public void `[`loadEnd`](#class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7)`(int browserId,int frameId,bool frameIsMain,int httpStatusCode)` <a id="class_q_cef_view_1a3f9b6d5ba2ccc9ec9629b3e7d9e6eac7" class="anchor"></a>
+### `{signal} public void `[`loadEnd`](#class_q_cef_view_1a5d64cbb95348336b85cb01f38de91e0a)`(int browserId,qint64 frameId,bool isMainFrame,int httpStatusCode)` <a id="class_q_cef_view_1a5d64cbb95348336b85cb01f38de91e0a" class="anchor"></a>
 
 Gets called on loading ends
 
@@ -364,12 +366,12 @@ Gets called on loading ends
 
 * `frameId` Indicates the frame id
 
-* `frameIsMain` Indicates the whether this is the main frame
+* `isMainFrame` Indicates the whether this is the main frame
 
 * `httpStatusCode` The HTTP status code
 
 ---
-### `{signal} public void `[`loadError`](#class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013)`(int browserId,int frameId,bool frameIsMain,int errorCode,const QString & errorMsg,const QString & failedUrl,bool & handled)` <a id="class_q_cef_view_1a981d6b6e86db8e78d868989689cb2013" class="anchor"></a>
+### `{signal} public void `[`loadError`](#class_q_cef_view_1a81ad0ea96d09d7ba705c4166502507e4)`(int browserId,qint64 frameId,bool isMainFrame,int errorCode,const QString & errorMsg,const QString & failedUrl)` <a id="class_q_cef_view_1a81ad0ea96d09d7ba705c4166502507e4" class="anchor"></a>
 
 Gets called on loading failed due to error
 
@@ -378,15 +380,13 @@ Gets called on loading failed due to error
 
 * `frameId` Indicates the frame id
 
-* `frameIsMain` Indicates the whether this is the main frame
+* `isMainFrame` Indicates the whether this is the main frame
 
 * `errorCode` The error code
 
 * `errorMsg` The error message
 
 * `failedUrl` The url caused the failure
-
-* `handled` Sets this parameter to indicates whether this error was handled or not
 
 ---
 ### `{signal} public void `[`draggableRegionChanged`](#class_q_cef_view_1ae11274817f627abf9d407e12dcd5c050)`(const QRegion & draggableRegion,const QRegion & nonDraggableRegion)` <a id="class_q_cef_view_1ae11274817f627abf9d407e12dcd5c050" class="anchor"></a>
@@ -415,6 +415,22 @@ Gets called on title changed
 
 #### Parameters
 * `title` The title
+
+---
+### `{signal} public void `[`faviconURLChanged`](#class_q_cef_view_1a7b9e104469c1a4a203c2e1d7e9cfd2a7)`(const QStringList & urls)` <a id="class_q_cef_view_1a7b9e104469c1a4a203c2e1d7e9cfd2a7" class="anchor"></a>
+
+Gets called on title changed
+
+#### Parameters
+* `urls` The urls
+
+---
+### `{signal} public void `[`faviconChanged`](#class_q_cef_view_1aa5d4a7098414f929a4ca7dd6b72d0893)`(const QIcon & icon)` <a id="class_q_cef_view_1aa5d4a7098414f929a4ca7dd6b72d0893" class="anchor"></a>
+
+Gets called on title changed
+
+#### Parameters
+* `icon` The icon
 
 ---
 ### `{signal} public void `[`fullscreenModeChanged`](#class_q_cef_view_1afa0fbb5b4c2c6c3592085e9b94dffc4a)`(bool fullscreen)` <a id="class_q_cef_view_1afa0fbb5b4c2c6c3592085e9b94dffc4a" class="anchor"></a>
@@ -479,7 +495,7 @@ Gets called on invoking method request from web content(Javascript)
 ---
 ### `{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId,qint64 frameId,qint64 context,const QVariant & result)` <a id="class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0" class="anchor"></a>
 
-Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1a16a6ad1ed7c28fe8dfe18ec310b50c1e) returned
+Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) returned
 
 #### Parameters
 * `browserId` The browser id
