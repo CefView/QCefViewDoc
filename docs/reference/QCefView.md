@@ -37,6 +37,9 @@ Represents the CEF browser view
 `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId,const QString & code,const QString & url)` | Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
 `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId,const QString & code,const QString & url,qint64 context)` | Executes javascript code in specified frame and the result will be reported through [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) signal
 `public bool `[`setPreference`](#class_q_cef_view_1a2b4b3da8874855bbe2d558081233d948)`(const QString & name,const QVariant & value,const QString & error)` | Sets the preference for this browser
+`public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` | Sets whether to disable the context menu for popup browser
+`public bool `[`isPopupContextMenuDisabled`](#class_q_cef_view_1abb79735affb74166c0bed7f361ce1388)`()` | Gets whether to disable the context menu for popup browser
+`public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` | Please refer to QWidget::setFocus
 `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` | Please refer to QWidget::inputMethodQuery
 `protected void `[`paintEvent`](#class_q_cef_view_1aa205502bb5238e6e2ce727046ed8a9b8)`(QPaintEvent * event)` | Please refer to QWidget::paintEvent
 `protected void `[`inputMethodEvent`](#class_q_cef_view_1a02d713f4a0545e85832b70ddced7e831)`(QInputMethodEvent * event)` | Please refer to QWidget::inputMethodEvent
@@ -51,6 +54,7 @@ Represents the CEF browser view
 `protected void `[`mousePressEvent`](#class_q_cef_view_1aac476c39493a4e75e681b9e09f13e060)`(QMouseEvent * event)` | Please refer to QWidget::mousePressEvent
 `protected void `[`mouseReleaseEvent`](#class_q_cef_view_1a69306a82128ba3e525103eb132aae62c)`(QMouseEvent * event)` | Please refer to QWidget::mouseReleaseEvent
 `protected void `[`wheelEvent`](#class_q_cef_view_1a3395f62959288420a834c736933e7228)`(QWheelEvent * event)` | Please refer to QWidget::wheelEvent
+`protected void `[`contextMenuEvent`](#class_q_cef_view_1ac8a83d1f2fb0e771fb48007838b40d1f)`(QContextMenuEvent * event)` | Please refer to QWidget::contextMenuEvent
 `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5)`(int browserId,bool isLoading,bool canGoBack,bool canGoForward)` | Gets called on loading state changed
 `{signal} public void `[`loadStart`](#class_q_cef_view_1a0165da07749c09130e0007a4ceff59ca)`(int browserId,qint64 frameId,bool isMainFrame,int transition_type)` | Gets called on loading starts
 `{signal} public void `[`loadEnd`](#class_q_cef_view_1a5d64cbb95348336b85cb01f38de91e0a)`(int browserId,qint64 frameId,bool isMainFrame,int httpStatusCode)` | Gets called on loading ends
@@ -67,9 +71,11 @@ Represents the CEF browser view
 `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId,qint64 frameId,const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | Gets called on new [QCefQuery](QCefQuery.md#class_q_cef_query) request
 `{signal} public void `[`invokeMethod`](#class_q_cef_view_1a221d07818d4f6766f72c68319fecc24e)`(int browserId,qint64 frameId,const QString & method,const QVariantList & arguments)` | Gets called on invoking method request from web content(Javascript)
 `{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId,qint64 frameId,qint64 context,const QVariant & result)` | Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) returned
-`{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a015cfe52a7ae5710ccd1a06c61044267)`(qint64 frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` | Gets called before the popup browser created
+`{slot} public virtual void `[`onBrowserWindowCreated`](#class_q_cef_view_1aa8641407e78d64120f7480afedb55b36)`(QWindow * win)` | Gets called after the main browser window created. This slot does not work for OSR mode.
+`{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` | Gets called before the popup browser created
 `{slot} public virtual void `[`onPopupCreated`](#class_q_cef_view_1aac12eb50ad220fa9ca1cd674ac471a9c)`(QWindow * wnd)` | Gets called right after the popup browser was created
-`enum `[`WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d) | 
+`{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()` | 
+`enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) | Represents the CEF popup windows open disposition
  | 
 
 ## Members
@@ -283,8 +289,26 @@ Sets the preference for this browser
 
 * `error` The error message populated on failure
 
+---
+### `public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` <a id="class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b" class="anchor"></a>
+
+Sets whether to disable the context menu for popup browser
+
+#### Parameters
+* `disable` True to disable; otherwise false
+
+---
+### `public bool `[`isPopupContextMenuDisabled`](#class_q_cef_view_1abb79735affb74166c0bed7f361ce1388)`()` <a id="class_q_cef_view_1abb79735affb74166c0bed7f361ce1388" class="anchor"></a>
+
+Gets whether to disable the context menu for popup browser
+
 #### Returns
-True on successful; otherwise false
+True to disable; otherwise false
+
+---
+### `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` <a id="class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada" class="anchor"></a>
+
+Please refer to QWidget::setFocus
 
 ---
 ### `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` <a id="class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368" class="anchor"></a>
@@ -355,6 +379,11 @@ Please refer to QWidget::mouseReleaseEvent
 ### `protected void `[`wheelEvent`](#class_q_cef_view_1a3395f62959288420a834c736933e7228)`(QWheelEvent * event)` <a id="class_q_cef_view_1a3395f62959288420a834c736933e7228" class="anchor"></a>
 
 Please refer to QWidget::wheelEvent
+
+---
+### `protected void `[`contextMenuEvent`](#class_q_cef_view_1ac8a83d1f2fb0e771fb48007838b40d1f)`(QContextMenuEvent * event)` <a id="class_q_cef_view_1ac8a83d1f2fb0e771fb48007838b40d1f" class="anchor"></a>
+
+Please refer to QWidget::contextMenuEvent
 
 ---
 ### `{signal} public void `[`loadingStateChanged`](#class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5)`(int browserId,bool isLoading,bool canGoBack,bool canGoForward)` <a id="class_q_cef_view_1afb28155fd58760bd84cf45f634e054b5" class="anchor"></a>
@@ -535,7 +564,15 @@ Gets called on the result of the javascript executed with [executeJavascriptWith
 * `result` The result
 
 ---
-### `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a015cfe52a7ae5710ccd1a06c61044267)`(qint64 frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` <a id="class_q_cef_view_1a015cfe52a7ae5710ccd1a06c61044267" class="anchor"></a>
+### `{slot} public virtual void `[`onBrowserWindowCreated`](#class_q_cef_view_1aa8641407e78d64120f7480afedb55b36)`(QWindow * win)` <a id="class_q_cef_view_1aa8641407e78d64120f7480afedb55b36" class="anchor"></a>
+
+Gets called after the main browser window created. This slot does not work for OSR mode.
+
+#### Parameters
+* `win` The CEF window
+
+---
+### `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId,const QString & targetUrl,const QString & targetFrameName,`[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition,`[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings,bool & DisableJavascriptAccess)` <a id="class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703" class="anchor"></a>
 
 Gets called before the popup browser created
 
@@ -564,20 +601,25 @@ Gets called right after the popup browser was created
 * `wnd` The host window of new created browser
 
 ---
-### `enum `[`WindowOpenDisposition`](#class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d) <a id="class_q_cef_view_1a9abb475b665abc98cf39d8bf5ae4e36d" class="anchor"></a>
+### `{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()` <a id="class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788" class="anchor"></a>
+
+---
+### `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) <a id="class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787" class="anchor"></a>
+
+Represents the CEF popup windows open disposition
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-WOD_UNKNOWN            | 
-WOD_CURRENT_TAB            | 
-WOD_SINGLETON_TAB            | 
-WOD_NEW_FOREGROUND_TAB            | 
-WOD_NEW_BACKGROUND_TAB            | 
-WOD_NEW_POPUP            | 
-WOD_NEW_WINDOW            | 
-WOD_SAVE_TO_DISK            | 
-WOD_OFF_THE_RECORD            | 
-WOD_IGNORE_ACTION            | 
+CefWindowOpenDispositionUnknown            | 
+CefWindowOpenDispositionCurrentTab            | 
+CefWindowOpenDispositionSingletonTab            | 
+CefWindowOpenDispositionNewForeGroundTab            | 
+CefWindowOpenDispositionNewBackgroundTab            | 
+CefWindowOpenDispositionNewPopup            | 
+CefWindowOpenDispositionNewWindow            | 
+CefWindowOpenDispositionSaveToDisk            | 
+CefWindowOpenDispositionOffTheRecord            | 
+CefWindowOpenDispositionIgnoreAction            | 
 
 ---
 ###  <a id="class_q_cef_view_1a6882524bec20e1620311b3853750638f" class="anchor"></a>
