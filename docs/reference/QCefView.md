@@ -15,7 +15,7 @@ Represents the CEF browser view
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public  `[`QCefView`](#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1)`(const QString url, const `[`QCefSetting`](docs/reference/QCefSetting.md#class_q_cef_setting)` * setting, QWidget * parent)`                  | Constructs a [QCefView](#class_q_cef_view) instance
+`public  `[`QCefView`](#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1)`(const QString url, const `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` * setting, QWidget * parent)`                  | Constructs a [QCefView](#class_q_cef_view) instance
 `public  `[`QCefView`](#class_q_cef_view_1a1b95ed3b73d10ee1580eea191d085c68)`(QWidget * parent)`                  | Constructs a [QCefView](#class_q_cef_view) instance
 `public  `[`~QCefView`](#class_q_cef_view_1a70903dca8ccd3e2776d68742531177fd)`()`                  | Destructs the [QCefView](#class_q_cef_view) instance
 `public void `[`addLocalFolderResource`](#class_q_cef_view_1a8c6286b279094a691832fc89b93c75f1)`(const QString & path, const QString & url, int priority)`                  | Adds a url mapping item with local web resource directory
@@ -30,10 +30,10 @@ Represents the CEF browser view
 `public bool `[`browserIsLoading`](#class_q_cef_view_1a12ca0bc0f4fc55dfc838769990d6a6d7)`()`                  | Checks whether the browser is loading
 `public void `[`browserReload`](#class_q_cef_view_1a45bc8cd7340ce410cf873d7296ffacf6)`()`                  | Requires the browser to reload
 `public void `[`browserStopLoad`](#class_q_cef_view_1afadd210f3c5cd95598b18aa158a9c16f)`()`                  | Requires the browser to stop load
-`public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event)`                  | Triggers the event for main frame
-`public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)`                  | Triggers the event for specified frame
-`public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event)`                  | Broad cast the event for all frames
-`public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](docs/reference/QCefQuery.md#class_q_cef_query)` & query)`                  | Response the [QCefQuery](docs/reference/QCefQuery.md#class_q_cef_query) request
+`public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)`                  | Triggers the event for main frame
+`public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)`                  | Triggers the event for specified frame
+`public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)`                  | Broad cast the event for all frames
+`public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)`                  | Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
 `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId, const QString & code, const QString & url)`                  | Executes javascript code in specified frame, this method does not report the result of the javascript. To get the result of the javascript execution use [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
 `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId, const QString & code, const QString & url, qint64 context)`                  | Executes javascript code in specified frame and the result will be reported through [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) signal
 `public bool `[`setPreference`](#class_q_cef_view_1a2b4b3da8874855bbe2d558081233d948)`(const QString & name, const QVariant & value, const QString & error)`                  | Sets the preference for this browser
@@ -68,13 +68,13 @@ Represents the CEF browser view
 `{signal} public void `[`statusMessage`](#class_q_cef_view_1a86d10c28b8821a36723e3504fa0cc7e7)`(const QString & message)`                  | Gets called on status message changed
 `{signal} public void `[`consoleMessage`](#class_q_cef_view_1a2dae6946082712815273c2967d37762a)`(const QString & message, int level)`                  | Gets called on console message from the web content
 `{signal} public void `[`loadingProgressChanged`](#class_q_cef_view_1ac7377eeed6811bafca1e6887b64d62a5)`(double progress)`                  | Gets called on loading progress changed
-`{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId, qint64 frameId, const `[`QCefQuery`](docs/reference/QCefQuery.md#class_q_cef_query)` & query)`                  | Gets called on new [QCefQuery](docs/reference/QCefQuery.md#class_q_cef_query) request
+`{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId, qint64 frameId, const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)`                  | Gets called on new [QCefQuery](QCefQuery.md#class_q_cef_query) request
 `{signal} public void `[`invokeMethod`](#class_q_cef_view_1a221d07818d4f6766f72c68319fecc24e)`(int browserId, qint64 frameId, const QString & method, const QVariantList & arguments)`                  | Gets called on invoking method request from web content(Javascript)
 `{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId, qint64 frameId, qint64 context, const QVariant & result)`                  | Gets called on the result of the javascript executed with [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) returned
-`{signal} public void `[`newDownloadItem`](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1)`(QCefDownloadItemPointer item)`                  | Gets called on new download item was required. Keep reference to the download item and call [QCefDownloadItem::start](docs/reference/QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method to allow and start the download, then get the updated information on [updateDownloadItem](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f) method. Ignore the download item to disallow the download
-`{signal} public void `[`updateDownloadItem`](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f)`(QCefDownloadItemPointer item)`                  | Gets called on download item updated. To get this method called [QCefDownloadItem::start](docs/reference/QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method must be called in [newDownloadItem](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1) method
+`{signal} public void `[`newDownloadItem`](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1)`(QCefDownloadItemPointer item)`                  | Gets called on new download item was required. Keep reference to the download item and call [QCefDownloadItem::start](QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method to allow and start the download, then get the updated information on [updateDownloadItem](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f) method. Ignore the download item to disallow the download
+`{signal} public void `[`updateDownloadItem`](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f)`(QCefDownloadItemPointer item)`                  | Gets called on download item updated. To get this method called [QCefDownloadItem::start](QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method must be called in [newDownloadItem](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1) method
 `{slot} public virtual void `[`onBrowserWindowCreated`](#class_q_cef_view_1aa8641407e78d64120f7480afedb55b36)`(QWindow * win)`                  | Gets called after the main browser window created. This slot does not work for OSR mode.
-`{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, `[`QCefSetting`](docs/reference/QCefSetting.md#class_q_cef_setting)` & settings, bool & DisableJavascriptAccess)`                  | Gets called before the popup browser created
+`{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings, bool & DisableJavascriptAccess)`                  | Gets called before the popup browser created
 `{slot} public virtual void `[`onPopupCreated`](#class_q_cef_view_1aac12eb50ad220fa9ca1cd674ac471a9c)`(QWindow * wnd)`                  | Gets called right after the popup browser was created
 `{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()`                  | 
 `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)                  | Represents the CEF popup windows open disposition
@@ -83,14 +83,14 @@ Represents the CEF browser view
 ## Members
 
 ---
-### `public  `[`QCefView`](#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1)`(const QString url, const `[`QCefSetting`](docs/reference/QCefSetting.md#class_q_cef_setting)` * setting, QWidget * parent)` {#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1}
+### `public  `[`QCefView`](#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1)`(const QString url, const `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` * setting, QWidget * parent)` {#class_q_cef_view_1aa0bf82c50f50f89aeee7afa3350110b1}
 
 Constructs a [QCefView](#class_q_cef_view) instance
 
 #### Parameters
 * `url` The target url
 
-* `setting` The [QCefSetting](docs/reference/QCefSetting.md#class_q_cef_setting) instance
+* `setting` The [QCefSetting](QCefSetting.md#class_q_cef_setting) instance
 
 * `parent` The parent
 
@@ -202,23 +202,23 @@ Requires the browser to reload
 Requires the browser to stop load
 
 ---
-### `public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event)` {#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2}
+### `public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` {#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2}
 
 Triggers the event for main frame
 
 #### Parameters
-* `event` The [QCefEvent](docs/reference/QCefEvent.md#class_q_cef_event) instance
+* `event` The [QCefEvent](QCefEvent.md#class_q_cef_event) instance
 
 #### Returns
 True on successful; otherwise false
 
 ---
-### `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)` {#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13}
+### `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)` {#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13}
 
 Triggers the event for specified frame
 
 #### Parameters
-* `event` The [QCefEvent](docs/reference/QCefEvent.md#class_q_cef_event) instance
+* `event` The [QCefEvent](QCefEvent.md#class_q_cef_event) instance
 
 * `frameId` The frame id
 
@@ -226,20 +226,20 @@ Triggers the event for specified frame
 True on successful; otherwise false
 
 ---
-### `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](docs/reference/QCefEvent.md#class_q_cef_event)` & event)` {#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4}
+### `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` {#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4}
 
 Broad cast the event for all frames
 
 #### Parameters
-* `event` The [QCefEvent](docs/reference/QCefEvent.md#class_q_cef_event) instance
+* `event` The [QCefEvent](QCefEvent.md#class_q_cef_event) instance
 
 #### Returns
 True on successful; otherwise false
 
 ---
-### `public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](docs/reference/QCefQuery.md#class_q_cef_query)` & query)` {#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc}
+### `public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` {#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc}
 
-Response the [QCefQuery](docs/reference/QCefQuery.md#class_q_cef_query) request
+Response the [QCefQuery](QCefQuery.md#class_q_cef_query) request
 
 #### Parameters
 * `query` The query instance
@@ -526,9 +526,9 @@ Gets called on loading progress changed
 * `progress` Current progress
 
 ---
-### `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId, qint64 frameId, const `[`QCefQuery`](docs/reference/QCefQuery.md#class_q_cef_query)` & query)` {#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3}
+### `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId, qint64 frameId, const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` {#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3}
 
-Gets called on new [QCefQuery](docs/reference/QCefQuery.md#class_q_cef_query) request
+Gets called on new [QCefQuery](QCefQuery.md#class_q_cef_query) request
 
 #### Parameters
 * `browserId` The browser id
@@ -568,7 +568,7 @@ Gets called on the result of the javascript executed with [executeJavascriptWith
 ---
 ### `{signal} public void `[`newDownloadItem`](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1)`(QCefDownloadItemPointer item)` {#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1}
 
-Gets called on new download item was required. Keep reference to the download item and call [QCefDownloadItem::start](docs/reference/QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method to allow and start the download, then get the updated information on [updateDownloadItem](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f) method. Ignore the download item to disallow the download
+Gets called on new download item was required. Keep reference to the download item and call [QCefDownloadItem::start](QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method to allow and start the download, then get the updated information on [updateDownloadItem](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f) method. Ignore the download item to disallow the download
 
 #### Parameters
 * `item` The new download item
@@ -576,7 +576,7 @@ Gets called on new download item was required. Keep reference to the download it
 ---
 ### `{signal} public void `[`updateDownloadItem`](#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f)`(QCefDownloadItemPointer item)` {#class_q_cef_view_1aca4701ddebb815dd1bc93d505fb3c30f}
 
-Gets called on download item updated. To get this method called [QCefDownloadItem::start](docs/reference/QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method must be called in [newDownloadItem](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1) method
+Gets called on download item updated. To get this method called [QCefDownloadItem::start](QCefDownloadItem.md#class_q_cef_download_item_1a177b402da90406c06e8024105191994c) method must be called in [newDownloadItem](#class_q_cef_view_1a01a3786b0d5d06290ed77ecac1039fb1) method
 
 #### Parameters
 * `item` The download item
@@ -590,7 +590,7 @@ Gets called after the main browser window created. This slot does not work for O
 * `win` The CEF window
 
 ---
-### `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, `[`QCefSetting`](docs/reference/QCefSetting.md#class_q_cef_setting)` & settings, bool & DisableJavascriptAccess)` {#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703}
+### `{slot} public virtual bool `[`onBeforePopup`](#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings, bool & DisableJavascriptAccess)` {#class_q_cef_view_1a3901aeb27b7ee70fd9c8b7e002fb6703}
 
 Gets called before the popup browser created
 
