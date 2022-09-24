@@ -37,6 +37,8 @@ Represents the download item
 `public QString `[`contentDisposition`](#class_q_cef_download_item_1af97dad25e439c8b997d6689fe1c91bf8)`() const`                  | Gets the content disposition
 `public QString `[`mimeType`](#class_q_cef_download_item_1afb8ec36477b64a222b0610c8518f8e31)`() const`                  | Gets the mime type
 `private QScopedPointer< QCefDownloadItemPrivate > `[`d_ptr`](#class_q_cef_download_item_1a631e89a5388360954e21644f91371a15)                  | 
+`private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a2721c6c268fbe3b92ec7e3f5524b6d1a)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete`                  | 
+`private `[`QCefDownloadItem`](#class_q_cef_download_item)` & `[`operator=`](#class_q_cef_download_item_1a0486e85d7e5ccf2c182e504129c9e068)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete`                  | 
 `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a6db795a0e61816d85a4125aa67d98b76)`()`                  | Constructs a download item instance
 
 ## Members
@@ -196,6 +198,12 @@ The mime type
 
 ---
 ### `private QScopedPointer< QCefDownloadItemPrivate > `[`d_ptr`](#class_q_cef_download_item_1a631e89a5388360954e21644f91371a15) {#class_q_cef_download_item_1a631e89a5388360954e21644f91371a15}
+
+---
+### `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a2721c6c268fbe3b92ec7e3f5524b6d1a)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` {#class_q_cef_download_item_1a2721c6c268fbe3b92ec7e3f5524b6d1a}
+
+---
+### `private `[`QCefDownloadItem`](#class_q_cef_download_item)` & `[`operator=`](#class_q_cef_download_item_1a0486e85d7e5ccf2c182e504129c9e068)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` {#class_q_cef_download_item_1a0486e85d7e5ccf2c182e504129c9e068}
 
 ---
 ### `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a6db795a0e61816d85a4125aa67d98b76)`()` {#class_q_cef_download_item_1a6db795a0e61816d85a4125aa67d98b76}

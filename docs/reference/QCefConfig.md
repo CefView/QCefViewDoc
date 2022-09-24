@@ -16,6 +16,8 @@ Represents the CEF setting. For more details please refer to: [https://bitbucket
 `public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()`                  | Destructs the config
 `public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)`                  | Adds a switch to the commandline args used to initialize the CEF
 `public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch, const QString & v)`                  | Adds a switch with value to the commandline args used to initialize the CEF
+`public void `[`setWindowlessRenderingEnabled`](#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96)`(const bool enabled)`                  | Sets the flag to enable/disable OSR mode
+`public const QVariant `[`WindowlessRenderingEnabled`](#class_q_cef_config_1a1390692449458f6bd774d024e41ae945)`() const`                  | Gets the OSR mode flag
 `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)`                  | Sets the browser subprocess path
 `public const QString `[`browserSubProcessPath`](#class_q_cef_config_1a2b15417d6066479256fc514721cd0474)`() const`                  | Gets the browser subprocess path
 `public void `[`setResourceDirectoryPath`](#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42)`(const QString & path)`                  | Sets the resource directory path
@@ -86,6 +88,22 @@ Adds a switch with value to the commandline args used to initialize the CEF
 * `smitch` The swtich name
 
 * `v` The switch value
+
+---
+### `public void `[`setWindowlessRenderingEnabled`](#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96)`(const bool enabled)` {#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96}
+
+Sets the flag to enable/disable OSR mode
+
+#### Parameters
+* `enabled` True to enable OSR mode, false to disable
+
+---
+### `public const QVariant `[`WindowlessRenderingEnabled`](#class_q_cef_config_1a1390692449458f6bd774d024e41ae945)`() const` {#class_q_cef_config_1a1390692449458f6bd774d024e41ae945}
+
+Gets the OSR mode flag
+
+#### Returns
+The flag indicates the enable/disable of OSR mode
 
 ---
 ### `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)` {#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82}
