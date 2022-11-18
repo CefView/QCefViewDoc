@@ -104,4 +104,4 @@ You can add a mapping item with the following code:
 
 ### Use Cases
 
-The above 3 & 4 are very useful when you develop your WebApp with the popular framework like React, Vue or some others, especially you are building SAP WebApp.
+The above 3 & 4 are very useful when you develop your WebApp with the popular framework like React, Vue or some others, especially you are building SPA WebApp.
