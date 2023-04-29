@@ -4,11 +4,6 @@ title: QCefDownloadItem
 
 # class `QCefDownloadItem` {#class_q_cef_download_item}
 
-```
-class QCefDownloadItem
-  : public QEnableSharedFromThis< QCefDownloadItem >
-```
-
 Represents the download item
 
 ## Summary
@@ -16,10 +11,11 @@ Represents the download item
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `public  `[`~QCefDownloadItem`](#class_q_cef_download_item_1a913a2654dcd05ef8facefc515d831124)`()`                  | Destructs the download item instance
-`public void `[`start`](#class_q_cef_download_item_1a177b402da90406c06e8024105191994c)`(const QString & path, bool useDefaultDialog)`                  | Starts the download
+`public void `[`start`](#class_q_cef_download_item_1a315592aa53a2bf7bc8aea717195f5b43)`(const QString & path, bool useDefaultDialog) const`                  | Starts the download
 `public void `[`pause`](#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568)`() const`                  | Pauses the download
 `public void `[`resume`](#class_q_cef_download_item_1aa2afc687e69c7c78f6c49e9a41a34823)`() const`                  | Resume the download
 `public void `[`cancel`](#class_q_cef_download_item_1a723b2081749a447049efd04e768d9e57)`() const`                  | Cancels the download
+`public bool `[`isStarted`](#class_q_cef_download_item_1a6febee1fe8a5f7d15e888a4352d50526)`() const`                  | Gets whether the download is started
 `public bool `[`isInProgress`](#class_q_cef_download_item_1a22455702c989d4dcc08fb1d13659739d)`() const`                  | Gets whether the download is in progress
 `public bool `[`isComplete`](#class_q_cef_download_item_1a67c86edf9e9cb742050e2521b55c86df)`() const`                  | Gets whether the download is complete
 `public bool `[`isCanceled`](#class_q_cef_download_item_1ada41b0480a3e97d788086ea8c420a22c)`() const`                  | Gets whether the download has been canceled or interrupted
@@ -49,7 +45,7 @@ Represents the download item
 Destructs the download item instance
 
 ---
-### `public void `[`start`](#class_q_cef_download_item_1a177b402da90406c06e8024105191994c)`(const QString & path, bool useDefaultDialog)` {#class_q_cef_download_item_1a177b402da90406c06e8024105191994c}
+### `public void `[`start`](#class_q_cef_download_item_1a315592aa53a2bf7bc8aea717195f5b43)`(const QString & path, bool useDefaultDialog) const` {#class_q_cef_download_item_1a315592aa53a2bf7bc8aea717195f5b43}
 
 Starts the download
 
@@ -67,6 +63,13 @@ Resume the download
 ### `public void `[`cancel`](#class_q_cef_download_item_1a723b2081749a447049efd04e768d9e57)`() const` {#class_q_cef_download_item_1a723b2081749a447049efd04e768d9e57}
 
 Cancels the download
+
+---
+### `public bool `[`isStarted`](#class_q_cef_download_item_1a6febee1fe8a5f7d15e888a4352d50526)`() const` {#class_q_cef_download_item_1a6febee1fe8a5f7d15e888a4352d50526}
+
+Gets whether the download is started
+
+#### Returns
 
 ---
 ### `public bool `[`isInProgress`](#class_q_cef_download_item_1a22455702c989d4dcc08fb1d13659739d)`() const` {#class_q_cef_download_item_1a22455702c989d4dcc08fb1d13659739d}
