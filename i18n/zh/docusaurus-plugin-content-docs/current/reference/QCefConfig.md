@@ -4,302 +4,302 @@ title: QCefConfig
 
 # class `QCefConfig` {#class_q_cef_config}
 
-Represents the CEF setting. For more details please refer to: [https://bitbucket.org/chromiumembedded/cef/wiki/GeneralUsage.md#markdown-header-cefsettings](https://bitbucket.org/chromiumembedded/cef/wiki/GeneralUsage.md#markdown-header-cefsettings)
+表示CEF设置。有关更多详细信息，请参阅: [https://bitbucket.org/chromiumembedded/cef/wiki/GeneralUsage.md#markdown-header-cefsettings](https://bitbucket.org/chromiumembedded/cef/wiki/GeneralUsage.md#markdown-header-cefsettings)
 
-## Summary
+## 总结
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public  `[`QCefConfig`](#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412)`()`                  | Constructs a CEF config instance
-`public  `[`QCefConfig`](#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516)`(const `[`QCefConfig`](#class_q_cef_config)` & other)`                  | Constructs a CEF setting from existing one
-`public `[`QCefConfig`](#class_q_cef_config)` & `[`operator=`](#class_q_cef_config_1a2f78eccb1b7463db2c0b174aff5d0553)`(const `[`QCefConfig`](#class_q_cef_config)` & other)`                  | Assigns an existing config to current
-`public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()`                  | Destructs the config
-`public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)`                  | Adds a switch to the commandline args used to initialize the CEF
-`public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch, const QString & v)`                  | Adds a switch with value to the commandline args used to initialize the CEF
-`public void `[`setWindowlessRenderingEnabled`](#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96)`(const bool enabled)`                  | Sets the flag to enable/disable OSR mode
-`public const QVariant `[`WindowlessRenderingEnabled`](#class_q_cef_config_1a1390692449458f6bd774d024e41ae945)`() const`                  | Gets the OSR mode flag
-`public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)`                  | Sets the browser subprocess path
-`public const QString `[`browserSubProcessPath`](#class_q_cef_config_1a2b15417d6066479256fc514721cd0474)`() const`                  | Gets the browser subprocess path
-`public void `[`setResourceDirectoryPath`](#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42)`(const QString & path)`                  | Sets the resource directory path
-`public const QString `[`resourceDirectoryPath`](#class_q_cef_config_1a45c8bed47089201d40124041b7499164)`() const`                  | Gets the resource directory path
-`public void `[`setLocalesDirectoryPath`](#class_q_cef_config_1a4af04a575ecd6b632a794c42144d03d8)`(const QString & path)`                  | Sets the locales directory path
-`public const QString `[`localesDirectoryPath`](#class_q_cef_config_1a3d43450cd3768ff1783596e48fcfe707)`() const`                  | Gets the locales directory path
-`public void `[`setLogLevel`](#class_q_cef_config_1a230ee52b4d64e0ea6f7ba5a4e9ac5f5e)`(const `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` lvl)`                  | Sets the log level
-`public const `[`QCefConfig::LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` `[`logLevel`](#class_q_cef_config_1a8728d026571a97449e13e8502c34e5e5)`() const`                  | Gets the log level
-`public void `[`setLocale`](#class_q_cef_config_1af67e837996a1dd84af0866f76588ba4e)`(const QString & locale)`                  | Sets the locale
-`public const QString `[`locale`](#class_q_cef_config_1ac1d5ca26f596c9f3e7697da04e549414)`() const`                  | Gets the locale
-`public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)`                  | Sets the user agent
-`public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const`                  | Gets the user agent
-`public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)`                  | Sets the cache directory path
-`public const QString `[`cachePath`](#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3)`() const`                  | Gets the cache directory path
-`public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)`                  | Sets the user data directory path
-`public const QString `[`userDataPath`](#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9)`() const`                  | Gets the user data directory path
-`public void `[`setBridgeObjectName`](#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60)`(const QString & name)`                  | Sets the bridge object name
-`public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const`                  | Gets the bridge object name
-`public void `[`setBackgroundColor`](#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0)`(const QColor & color)`                  | Sets the background color of the web page
-`public const QVariant `[`backgroundColor`](#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)`() const`                  | Gets the background color
-`public void `[`setAcceptLanguageList`](#class_q_cef_config_1a360c26dd512b9a4a3d6596c0590c370b)`(const QString & languages)`                  | Sets the acceptable language list
-`public const QString `[`acceptLanguageList`](#class_q_cef_config_1a2828af9a2815ddeb1026e2f6a760d5e8)`() const`                  | Get the acceptable language list
-`public void `[`setPersistSessionCookies`](#class_q_cef_config_1a04c4f9aa52131df29c4eb6abd48cc2f0)`(bool enabled)`                  | Sets whether to persist session cookie
-`public const QVariant `[`persistSessionCookies`](#class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c)`() const`                  | Gets whether to persist session cookie
-`public void `[`setPersistUserPreferences`](#class_q_cef_config_1a6c5c7d498a6c003166071ac6e4e7e359)`(bool enabled)`                  | Sets whether to persist user preferences
-`public const QVariant `[`persistUserPreferences`](#class_q_cef_config_1a4749b6aa16660a15d753f5248985e25f)`() const`                  | Gets whether to persist user preferences
-`public void `[`setRemoteDebuggingPort`](#class_q_cef_config_1ac502d5e4b911c4e57d6fe4167be6d801)`(short port)`                  | Sets the remote debugging port
-`public const QVariant `[`remoteDebuggingPort`](#class_q_cef_config_1aeaa7b37b83ee32a5ec50a1dec11d0c2e)`() const`                  | Gets the remote debugging port
-`enum `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)                  | Represents the log severity
-`private QScopedPointer< QCefConfigPrivate > `[`d_ptr`](#class_q_cef_config_1ab524eb236e2915eabee11aa49124a0fc)                  | 
+ 成员                                                         | 描述                                            
+ ------------------------------------------------------------ | ----------------------------------------------- 
+ `public  `[`QCefConfig`](#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412)`()` | QCefConfig 构造函数                             
+ `public  `[`QCefConfig`](#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` | QCefConfig 拷贝构造函数                         
+ `public `[`QCefConfig`](#class_q_cef_config)` & `[`operator=`](#class_q_cef_config_1a2f78eccb1b7463db2c0b174aff5d0553)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` | QCefConfig 拷贝赋值函数                         
+ `public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()` | QCefConfig 析构函数                             
+ `public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)` | 将参数添加到用于初始化 CEF 的命令行参数         
+ `public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch, const QString & v)` | 将带有值的参数添加到用于初始化 CEF 的命令行参数 
+ `public void `[`setWindowlessRenderingEnabled`](#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96)`(const bool enabled)` | 设置启用/禁用 OSR 模式                          
+ `public const QVariant `[`WindowlessRenderingEnabled`](#class_q_cef_config_1a1390692449458f6bd774d024e41ae945)`() const` | 获取 OSR 模式标志                               
+ `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)` | 设置浏览器子进程路径                            
+ `public const QString `[`browserSubProcessPath`](#class_q_cef_config_1a2b15417d6066479256fc514721cd0474)`() const` | 获取浏览器子进程路径                            
+ `public void `[`setResourceDirectoryPath`](#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42)`(const QString & path)` | 设置资源目录路径                                
+ `public const QString `[`resourceDirectoryPath`](#class_q_cef_config_1a45c8bed47089201d40124041b7499164)`() const` | 获取资源目录路径                                
+ `public void `[`setLocalesDirectoryPath`](#class_q_cef_config_1a4af04a575ecd6b632a794c42144d03d8)`(const QString & path)` | 设置区域目录路径                                
+ `public const QString `[`localesDirectoryPath`](#class_q_cef_config_1a3d43450cd3768ff1783596e48fcfe707)`() const` | 获取区域目录路径                                
+ `public void `[`setLogLevel`](#class_q_cef_config_1a230ee52b4d64e0ea6f7ba5a4e9ac5f5e)`(const `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` lvl)` | 设置日志级别                                    
+ `public const `[`QCefConfig::LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` `[`logLevel`](#class_q_cef_config_1a8728d026571a97449e13e8502c34e5e5)`() const` | 获取日志级别                                    
+ `public void `[`setLocale`](#class_q_cef_config_1af67e837996a1dd84af0866f76588ba4e)`(const QString & locale)` | 设置区域                                        
+ `public const QString `[`locale`](#class_q_cef_config_1ac1d5ca26f596c9f3e7697da04e549414)`() const` | 获取区域                                        
+ `public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)` | 设置代理                                        
+ `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const` | 获取代理                                        
+ `public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)` | 设置缓存路径                                    
+ `public const QString `[`cachePath`](#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3)`() const` | 获取缓存路径                                    
+ `public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)` | 设置用户数据目录路径                            
+ `public const QString `[`userDataPath`](#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9)`() const` | 获取用户数据目录路径                            
+ `public void `[`setBridgeObjectName`](#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60)`(const QString & name)` | 设置 Bridge 对象名字                            
+ `public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const` | 获取 Bridge 对象名字                            
+ `public void `[`setBackgroundColor`](#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0)`(const QColor & color)` | 设置网页的背景色                                
+ `public const QVariant `[`backgroundColor`](#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)`() const` | 获取网页的背景色                                
+ `public void `[`setAcceptLanguageList`](#class_q_cef_config_1a360c26dd512b9a4a3d6596c0590c370b)`(const QString & languages)` | 设置可接受的语言列表                            
+ `public const QString `[`acceptLanguageList`](#class_q_cef_config_1a2828af9a2815ddeb1026e2f6a760d5e8)`() const` | 获取可接受的语言列表                            
+ `public void `[`setPersistSessionCookies`](#class_q_cef_config_1a04c4f9aa52131df29c4eb6abd48cc2f0)`(bool enabled)` | 设置是否保留会话 Cookie                         
+ `public const QVariant `[`persistSessionCookies`](#class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c)`() const` | 获取是否保留会话 Cookie                         
+ `public void `[`setPersistUserPreferences`](#class_q_cef_config_1a6c5c7d498a6c003166071ac6e4e7e359)`(bool enabled)` | 设置是否保留用户首选项                          
+ `public const QVariant `[`persistUserPreferences`](#class_q_cef_config_1a4749b6aa16660a15d753f5248985e25f)`() const` | 获取是否保留用户首选项                          
+ `public void `[`setRemoteDebuggingPort`](#class_q_cef_config_1ac502d5e4b911c4e57d6fe4167be6d801)`(short port)` | 设置远程调试端口                                
+ `public const QVariant `[`remoteDebuggingPort`](#class_q_cef_config_1aeaa7b37b83ee32a5ec50a1dec11d0c2e)`() const` | 获取远程调试端口                                
+ `enum `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c) | 日志级别枚举                                    
+ `private QScopedPointer< QCefConfigPrivate > `[`d_ptr`](#class_q_cef_config_1ab524eb236e2915eabee11aa49124a0fc) |                                                 
 
 ## Members
 
 ---
 ### `public  `[`QCefConfig`](#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412)`()` {#class_q_cef_config_1a2a937276cdbf76f77d2bf70a766c6412}
 
-Constructs a CEF config instance
+QCefConfig 构造函数
 
 ---
 ### `public  `[`QCefConfig`](#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` {#class_q_cef_config_1af90f0b9e087d39a6bd059701ee450516}
 
-Constructs a CEF setting from existing one
+QCefConfig 拷贝构造函数
 
 ---
 ### `public `[`QCefConfig`](#class_q_cef_config)` & `[`operator=`](#class_q_cef_config_1a2f78eccb1b7463db2c0b174aff5d0553)`(const `[`QCefConfig`](#class_q_cef_config)` & other)` {#class_q_cef_config_1a2f78eccb1b7463db2c0b174aff5d0553}
 
-Assigns an existing config to current
+QCefConfig 拷贝赋值函数
 
 ---
 ### `public  `[`~QCefConfig`](#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a)`()` {#class_q_cef_config_1a67d06ef56affa82e943c7a5c73afee9a}
 
-Destructs the config
+QCefConfig 析构函数
 
 ---
 ### `public void `[`addCommandLineSwitch`](#class_q_cef_config_1a2873f9e8e8997db4060348418df16632)`(const QString & smitch)` {#class_q_cef_config_1a2873f9e8e8997db4060348418df16632}
 
-Adds a switch to the commandline args used to initialize the CEF
+将参数添加到用于初始化 CEF 的命令行参数 
 
-#### Parameters
-* `smitch` The switch name
+#### 参数
+* `smitch` 参数名
 
 ---
 ### `public void `[`addCommandLineSwitchWithValue`](#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5)`(const QString & smitch, const QString & v)` {#class_q_cef_config_1a141daa8b02526d190e462cbcb38dbab5}
 
-Adds a switch with value to the commandline args used to initialize the CEF
+将带有值的参数添加到用于初始化 CEF 的命令行参数
 
-#### Parameters
-* `smitch` The swtich name
+#### 参数
+* `smitch` 参数名
 
-* `v` The switch value
+* `v` 参数值
 
 ---
 ### `public void `[`setWindowlessRenderingEnabled`](#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96)`(const bool enabled)` {#class_q_cef_config_1af6041bcae9fcf72ea47ffc47d62e5a96}
 
-Sets the flag to enable/disable OSR mode
+设置启用/禁用 OSR 模式
 
-#### Parameters
-* `enabled` True to enable OSR mode, false to disable
+#### 参数
+* `enabled` True为启用 OSR 模式, false 为禁用
 
 ---
 ### `public const QVariant `[`WindowlessRenderingEnabled`](#class_q_cef_config_1a1390692449458f6bd774d024e41ae945)`() const` {#class_q_cef_config_1a1390692449458f6bd774d024e41ae945}
 
-Gets the OSR mode flag
+获取 OSR 模式标志
 
-#### Returns
-The flag indicates the enable/disable of OSR mode
+#### 返回值
+OSR 模式的启用/禁用的标志
 
 ---
 ### `public void `[`setBrowserSubProcessPath`](#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82)`(const QString & path)` {#class_q_cef_config_1a3fca1b7b72f37f800278c743b74f1b82}
 
-Sets the browser subprocess path
+设置浏览器子进程路径
 
-#### Parameters
-* `path` The path to the sub process executable
+#### 参数
+* `path` 子进程可执行文件的路径
 
 ---
 ### `public const QString `[`browserSubProcessPath`](#class_q_cef_config_1a2b15417d6066479256fc514721cd0474)`() const` {#class_q_cef_config_1a2b15417d6066479256fc514721cd0474}
 
-Gets the browser subprocess path
+获取浏览器子进程路径
 
 ---
 ### `public void `[`setResourceDirectoryPath`](#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42)`(const QString & path)` {#class_q_cef_config_1a0690fb1cb1a3cd87c44be340b6308f42}
 
-Sets the resource directory path
+设置资源目录路径
 
-#### Parameters
-* `path` The resource directory path
+#### 参数
+* `path` 资源目录路径
 
 ---
 ### `public const QString `[`resourceDirectoryPath`](#class_q_cef_config_1a45c8bed47089201d40124041b7499164)`() const` {#class_q_cef_config_1a45c8bed47089201d40124041b7499164}
 
-Gets the resource directory path
+获取资源目录路径
 
 ---
 ### `public void `[`setLocalesDirectoryPath`](#class_q_cef_config_1a4af04a575ecd6b632a794c42144d03d8)`(const QString & path)` {#class_q_cef_config_1a4af04a575ecd6b632a794c42144d03d8}
 
-Sets the locales directory path
+设置区域目录路径
 
-#### Parameters
-* `path` The locales directory path
+#### 参数
+* `path` 区域目录路径
 
 ---
 ### `public const QString `[`localesDirectoryPath`](#class_q_cef_config_1a3d43450cd3768ff1783596e48fcfe707)`() const` {#class_q_cef_config_1a3d43450cd3768ff1783596e48fcfe707}
 
-Gets the locales directory path
+获取区域目录路径
 
 ---
 ### `public void `[`setLogLevel`](#class_q_cef_config_1a230ee52b4d64e0ea6f7ba5a4e9ac5f5e)`(const `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` lvl)` {#class_q_cef_config_1a230ee52b4d64e0ea6f7ba5a4e9ac5f5e}
 
-Sets the log level
+设置日志级别
 
-#### Parameters
+#### 参数
 * `lvl`
 
 ---
 ### `public const `[`QCefConfig::LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` `[`logLevel`](#class_q_cef_config_1a8728d026571a97449e13e8502c34e5e5)`() const` {#class_q_cef_config_1a8728d026571a97449e13e8502c34e5e5}
 
-Gets the log level
+获取日志级别
 
-#### Returns
-The current log level
+#### 返回值
+当前日志级别
 
 ---
 ### `public void `[`setLocale`](#class_q_cef_config_1af67e837996a1dd84af0866f76588ba4e)`(const QString & locale)` {#class_q_cef_config_1af67e837996a1dd84af0866f76588ba4e}
 
-Sets the locale
+设置区域
 
-#### Parameters
-* `locale` The locale to use. If empty the default locale of "en-US" will be used. This value is ignored on Linux where locale is determined using environment variable parsing with the precedence order: LANGUAGE, LC_ALL, LC_MESSAGES and LANG. Also configurable using the "lang" command-line switch.
+#### 参数
+* `locale` 使用的区域设置。如果为空，将使用默认区域设置“en-US”。在 Linux 上会忽略此值，其中区域设置是使用环境变量解析确定的，优先级顺序为：LANGUAGE、LC_ALL、LC_MESSAGES 和 LANG。也可以使用“lang”命令行开关进行配置。
 
 ---
 ### `public const QString `[`locale`](#class_q_cef_config_1ac1d5ca26f596c9f3e7697da04e549414)`() const` {#class_q_cef_config_1ac1d5ca26f596c9f3e7697da04e549414}
 
-Gets the locale
+获取区域
 
 ---
 ### `public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)` {#class_q_cef_config_1a60009aad390599eb5857182a32de7f23}
 
-Sets the user agent
+设置代理
 
-#### Parameters
-* `agent` The user agent
+#### 参数
+* `agent` 用户代理
 
 ---
 ### `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const` {#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016}
 
-Gets the user agent
+获取代理
 
 ---
 ### `public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)` {#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8}
 
-Sets the cache directory path
+设置缓存路径
 
-#### Parameters
-* `path` The cache path
+#### 参数
+* `path` 缓存路径
 
 ---
 ### `public const QString `[`cachePath`](#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3)`() const` {#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3}
 
-Gets the cache directory path
+获取缓存路径
 
 ---
 ### `public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)` {#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852}
 
-Sets the user data directory path
+设置用户数据目录路径
 
-#### Parameters
-* `path` The user data directory path
+#### 参数
+* `path` 用户数据目录路径
 
 ---
 ### `public const QString `[`userDataPath`](#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9)`() const` {#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9}
 
-Gets the user data directory path
+获取用户数据目录路径
 
 ---
 ### `public void `[`setBridgeObjectName`](#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60)`(const QString & name)` {#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60}
 
-Sets the bridge object name
+设置 Bridge 对象名字
 
-#### Parameters
-* `name` The bridge object name
+#### 参数
+* `name` Bridge 对象名
 
-The bridge object represents a Javascript object which will be inserted into all browser and frames. This object is designated for communicating between Javascript in web content and native context(C/C++) code. This object is set as an property of window object. That means it can be obtained by calling window.bridgeObject in the Javascript code
+Bridge 对象表示一个 Javascript 对象，该对象将插入到所有浏览器和框架中。此对象被指定用于在 Web 内容中的 Javascript 和本机上下文 （C/C++） 代码之间进行通信。此对象被设置为窗口对象的属性。这意味着它可以通过在Javascript代码中调用window.bridgeObject来获得。
 
 ---
 ### `public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const` {#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35}
 
-Gets the bridge object name
+获取 Bridge 对象名字
 
 ---
 ### `public void `[`setBackgroundColor`](#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0)`(const QColor & color)` {#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0}
 
-Sets the background color of the web page
+设置网页的背景色
 
-#### Parameters
-* `color` The color to be set
+#### 参数
+* `color` 设置的颜色
 
-This only works if the web page has no background color set. The alpha component value will be adjusted to 0 or 255, it means if you pass a value with alpha value in the range of [1, 255], it will be accepted as 255. The default value is qRgba(255, 255,. 255, 255)
+这仅在网页未设置背景颜色时才有效。alpha 分量值将调整为 0 或 255，这意味着如果您传递的 alpha 值在 [1， 255] 范围内，它将被接受为 255。默认值为 qRgba（255， 255，255， 255）
 
 ---
 ### `public const QVariant `[`backgroundColor`](#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)`() const` {#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b}
 
-Gets the background color
+获取网页的背景色
 
 ---
 ### `public void `[`setAcceptLanguageList`](#class_q_cef_config_1a360c26dd512b9a4a3d6596c0590c370b)`(const QString & languages)` {#class_q_cef_config_1a360c26dd512b9a4a3d6596c0590c370b}
 
-Sets the acceptable language list
+设置可接受的语言列表
 
-#### Parameters
-* `languages`
+#### 参数
+* `languages` 语言列表（逗号分隔）
 
 ---
 ### `public const QString `[`acceptLanguageList`](#class_q_cef_config_1a2828af9a2815ddeb1026e2f6a760d5e8)`() const` {#class_q_cef_config_1a2828af9a2815ddeb1026e2f6a760d5e8}
 
-Get the acceptable language list
+ 获取可接受的语言列表
 
 ---
 ### `public void `[`setPersistSessionCookies`](#class_q_cef_config_1a04c4f9aa52131df29c4eb6abd48cc2f0)`(bool enabled)` {#class_q_cef_config_1a04c4f9aa52131df29c4eb6abd48cc2f0}
 
-Sets whether to persist session cookie
+设置是否保留会话 Cookie
 
-#### Parameters
-* `enabled` True if to persist session cookie
+#### 参数
+* `enabled` True为保留会话 Cookie
 
 ---
 ### `public const QVariant `[`persistSessionCookies`](#class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c)`() const` {#class_q_cef_config_1aa8b22bc6b4d9ef5c8aeccfc363ee1f9c}
 
-Gets whether to persist session cookie
+获取是否保留会话 Cookie
 
 ---
 ### `public void `[`setPersistUserPreferences`](#class_q_cef_config_1a6c5c7d498a6c003166071ac6e4e7e359)`(bool enabled)` {#class_q_cef_config_1a6c5c7d498a6c003166071ac6e4e7e359}
 
-Sets whether to persist user preferences
+设置是否保留用户首选项
 
-#### Parameters
-* `enabled` True if to persist user preferences
+#### 参数
+* `enabled` True 为保留用户首选项
 
 ---
 ### `public const QVariant `[`persistUserPreferences`](#class_q_cef_config_1a4749b6aa16660a15d753f5248985e25f)`() const` {#class_q_cef_config_1a4749b6aa16660a15d753f5248985e25f}
 
-Gets whether to persist user preferences
+ 获取是否保留用户首选项
 
 ---
 ### `public void `[`setRemoteDebuggingPort`](#class_q_cef_config_1ac502d5e4b911c4e57d6fe4167be6d801)`(short port)` {#class_q_cef_config_1ac502d5e4b911c4e57d6fe4167be6d801}
 
-Sets the remote debugging port
+设置远程调试端口
 
-#### Parameters
-* `port` The port to use
+#### 参数：
+* `port` 使用的端口
 
-CEF supports the remote debugging with Dev Tools in Chrome/Edge. if this value is set then you can debug the web application by accessing [http://127.0.0.1:port](http://127.0.0.1:port) from Chrome/Edge
+CEF 支持在 Chrome/Edge 中使用 Dev Tools 进行远程调试。如果设置了这个值，那么你可以通过访问[http://127.0.0.1:port ]( http://127.0.0.1:port )从 Chrome/Edge 来调试 web 应用程序
 
 ---
 ### `public const QVariant `[`remoteDebuggingPort`](#class_q_cef_config_1aeaa7b37b83ee32a5ec50a1dec11d0c2e)`() const` {#class_q_cef_config_1aeaa7b37b83ee32a5ec50a1dec11d0c2e}
 
-Gets the remote debugging port
+获取远程调试端口
 
 ---
 ### `enum `[`LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c) {#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c}
 
-Represents the log severity
+日志级别
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
