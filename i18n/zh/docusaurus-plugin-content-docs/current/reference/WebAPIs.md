@@ -5,72 +5,72 @@ title: Web APIs
 # Web APIs
 
 ## object `window.CefViewClient`
-QCefView added the Javascript bridge object `CefViewClient` to `window` object for all browsers frames, with this bridge object you can perform communication between native and web context at anytime
+QCefView 为所有浏览器框架添加了`CefViewClient` 到 `window` 的 Javascript 桥接对象，使用这个桥接对象，你可以在任何时候执行本机和 Web 上下文之间的通信
 
-### Summary
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-[`addEventListener`](#web_apis_addEventListener)`(name, listener)` | Adds a listener for the event with specified name
-[`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` | Removes the listener for the event with specified name
-[`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` | Invokes a native method with the specified name and arguments
+### 总结
+ 成员                                                         | 描述                              
+ ------------------------------------------------------------ | --------------------------------- 
+ [`addEventListener`](#web_apis_addEventListener)`(name, listener)` | 为具有指定名称的事件添加 listener 
+ [`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` | 删除具有指定名称的事件的 listener 
+ [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)`    | 调用具有指定名称和参数的本机方法  
 
 ### Members
 
 ---
 #### [`addEventListener`](#web_apis_addEventListener)`(name, listener)` <a class="anchor" id="web_apis_addEventListener"></a>
 
-Adds a listener for the event with specified name
+为具有指定名称的事件添加 listener
 
-##### Parameters
-* `name` The event name
-* `listener` The listener callback function
+##### 参数
+* `name` 事件名称
+* `listener` listener 回调函数
 
 ---
 #### [`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` <a class="anchor" id="web_apis_removeEventListener"></a>
 
-Removes the listener for the event with specified name
+删除具有指定名称的事件的 listener
 
-##### Parameters
-* `name` The event name
-* `listener` The listener callback function
+##### 参数
+* `name` 事件名称
+* `listener` listener 回调函数
 
 ---
 #### [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` <a class="anchor" id="web_apis_invokeMethod"></a>
 
-Invokes a native method with the specified name and arguments
+调用具有指定名称和参数的本机方法
 
-##### Parameters
-* `name` The method name
-* `..args` The arguments for the method
+##### 参数
+* `name` 方法名称
+* `..args` 方法的参数
 
 
 ## object `window`
-QCefView added some extra methods to the `window` object for all browsers frames, with these methods you can perform communication between native and web context
+QCefView 为所有浏览器框架的对象添加了一些额外的方法，使用这些方法，您可以在本机上下文和 Web 上下文之间执行通信`window`
 
-### Summary
+### 总结
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-[`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` | Sends a cef query request to the native context
-[`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` | Cancels the query request with the specified id
+ 成员                                                         | 描述                            
+ ------------------------------------------------------------ | ------------------------------- 
+ [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)`     | 将 cef 查询请求发送到本机上下文 
+ [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` | 取消具有指定 id 的查询请求      
 
 ### Members
 
 ---
 #### [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` <a class="anchor" id="web_apis_CefViewQuery"></a>
 
-Sends a cef query request to the native context
+将 cef 查询请求发送到本机上下文
 
-##### Parameters
-* `query` The query object
+##### 参数
+* `query` 查询对象
 
-##### Returns
-* The query id
+##### 返回值
+* 查询 ID
 
 ---
 #### [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` <a class="anchor" id="web_apis_CefViewQueryCancel"></a>
 
-Cancels the query request with the specified id
+取消具有指定 id 的查询请求
 
-##### Parameters
-* `id` The query id
+##### 参数
+* `id` 查询 ID
