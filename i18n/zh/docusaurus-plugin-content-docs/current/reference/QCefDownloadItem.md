@@ -6,9 +6,9 @@ title: QCefDownloadItem
 
 表示下载项
 
-## Summary
+## 总结
 
- Members                                                      | Descriptions                       
+ 成员                                                      | 描述                       
  ------------------------------------------------------------ | ---------------------------------- 
  `public  `[`~QCefDownloadItem`](#class_q_cef_download_item_1a913a2654dcd05ef8facefc515d831124)`()` | QCefDownloadItem 析构函数          
  `public void `[`start`](#class_q_cef_download_item_1a315592aa53a2bf7bc8aea717195f5b43)`(const QString & path, bool useDefaultDialog) const` | 开始下载                           
@@ -32,9 +32,9 @@ title: QCefDownloadItem
  `public QString `[`suggestedFileName`](#class_q_cef_download_item_1ac0dd9f8bea7ca594f04935d81cfb72a4)`() const` | 获取建议的文件名                   
  `public QString `[`contentDisposition`](#class_q_cef_download_item_1af97dad25e439c8b997d6689fe1c91bf8)`() const` | 获取内容配置                       
  `public QString `[`mimeType`](#class_q_cef_download_item_1afb8ec36477b64a222b0610c8518f8e31)`() const` | 获取 MIME 类型                     
- `private QScopedPointer< QCefDownloadItemPrivate > `[`d_ptr`](#class_q_cef_download_item_1a631e89a5388360954e21644f91371a15) |                                    
- `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a2721c6c268fbe3b92ec7e3f5524b6d1a)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` |                                    
- `private `[`QCefDownloadItem`](#class_q_cef_download_item)` & `[`operator=`](#class_q_cef_download_item_1a0486e85d7e5ccf2c182e504129c9e068)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` |                                    
+ `private QScopedPointer< QCefDownloadItemPrivate > `[`d_ptr`](#class_q_cef_download_item_1a631e89a5388360954e21644f91371a15) |
+ `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a2721c6c268fbe3b92ec7e3f5524b6d1a)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` |
+ `private `[`QCefDownloadItem`](#class_q_cef_download_item)` & `[`operator=`](#class_q_cef_download_item_1a0486e85d7e5ccf2c182e504129c9e068)`(`[`QCefDownloadItem`](#class_q_cef_download_item)` &&) = delete` |
  `private  `[`QCefDownloadItem`](#class_q_cef_download_item_1a6db795a0e61816d85a4125aa67d98b76)`()` | QCefDownloadItem 构造函数          
 
 ## Members
