@@ -33,6 +33,11 @@ export QTDIR=/usr/share/Qt/6.2.2/gcc_64
 
 Just check out the repo from [https://github.com/CefView/QCefView](https://github.com/CefView/QCefView), then init the submodule. This repo depends on the submodule [https://github.com/CefView/CefViewCore](https://github.com/CefView/CefViewCore). 
 
+You can clone the code using the following git command:
+```
+git clone --recursive https://github.com/CefView/QCefView.git
+```
+
 ### Windows
 ```bash
 # Generate VS projects

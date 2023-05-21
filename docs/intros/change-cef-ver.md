@@ -13,12 +13,14 @@ Find the target version you want from the CEF Automated Builds website: [https:/
 
 ## 2. Modify QCefConfig.cmake
 
-Change the download URL in the [CefConfig.cmake](https://github.com/CefView/CefViewCore/blob/3ba46626d9739bd6266356828400ca1de41c1f20/CefConfig.cmake) file.
+Change the CEF version in the `CefView/CefViewCore/` [CefConfig.cmake](https://github.com/CefView/CefViewCore/blob/3ba46626d9739bd6266356828400ca1de41c1f20/CefConfig.cmake) file.
 
 Normally you just need to change the first line command:
-> set(CEF_SDK_VERSION "cef_binary_89.0.12+g2b76680+chromium-89.0.4389.90")
+> set(CEF_SDK_VERSION "112.3.0+gb09c4ca+chromium-112.0.5615.165")
 
 set the **`CEF_SDK_VERSION`** to the target version you want.
+
+> Note! The format here is `112.3.0+gb09c4ca+chromium-112.0.5615.165`，not `cef_binary_112.3.0+gb09c4ca+chromium-112.0.5615.165_windows64`
 
 ## 3. Build QCefView
 

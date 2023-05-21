@@ -34,6 +34,11 @@ export QTDIR=/usr/share/Qt/6.2.2/gcc_64
 
 从[https://github.com/CefView/QCefView](https://github.com/CefView/QCefView)检出最新代码，不要忘记初始化submodule。该项目依赖子模块：[https://github.com/CefView/CefViewCore](https://github.com/CefView/CefViewCore)。
 
+你可以使用以下 git 命令下载仓库代码：
+
+```
+git clone --recursive https://github.com/CefView/QCefView.git
+```
 ### Windows
 ```bash
 # Generate VS projects
