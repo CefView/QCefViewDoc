@@ -49,6 +49,11 @@ QCefDownloadItem 析构函数
 
 开始下载
 
+#### 参数
+
++ `path` 保存下载项的完整路径名(必须包括文件名)
++ `useDefaultDialog` 是否使用默认的“另存为...”对话框
+
 ---
 ### `public void `[`pause`](#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568)`() const` {#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568}
 
