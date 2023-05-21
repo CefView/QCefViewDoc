@@ -13,12 +13,14 @@ title: 更换CEF版本
 
 ## 2. 修改QCefConfig.cmake文件
 
-修改文件[CefConfig.cmake](https://github.com/CefView/CefViewCore/blob/3ba46626d9739bd6266356828400ca1de41c1f20/CefConfig.cmake)中的CEF下载连接。
+修改路径下的`CefView/CefViewCore/`[CefConfig.cmake](https://github.com/CefView/CefViewCore/blob/3ba46626d9739bd6266356828400ca1de41c1f20/CefConfig.cmake)文件中的CEF版本。
 
 通常，只需要修改第一行中的指令
-> set(CEF_SDK_VERSION "cef_binary_89.0.12+g2b76680+chromium-89.0.4389.90")
+> set(CEF_SDK_VERSION "112.3.0+gb09c4ca+chromium-112.0.5615.165")
 
 设置 **`CEF_SDK_VERSION`** 为要使用的目标版本。
+
+> 注意!这里的格式为`112.3.0+gb09c4ca+chromium-112.0.5615.165`，非`cef_binary_112.3.0+gb09c4ca+chromium-112.0.5615.165_windows64`
 
 ## 3. 构建QCefView
 
