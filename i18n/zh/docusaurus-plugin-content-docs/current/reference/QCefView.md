@@ -32,11 +32,11 @@ class QCefView
  `public void `[`browserReload`](#class_q_cef_view_1a45bc8cd7340ce410cf873d7296ffacf6)`()` | 要求浏览器重新加载                                           
  `public void `[`browserStopLoad`](#class_q_cef_view_1afadd210f3c5cd95598b18aa158a9c16f)`()` | 要求浏览器停止加载                                           
  `public bool `[`triggerEvent`](#class_q_cef_view_1ac47c23ffcd94bdffe2b6a81eaae077a2)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | 触发主框架的事件                                             
- `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)` | 触发指定帧的事件                                             
- `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | 为所有帧广播事件                                             
+ `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)` | 触发指定frame的事件                                             
+ `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` | 为所有frame广播事件                                             
  `public bool `[`responseQCefQuery`](#class_q_cef_view_1afc838dab54d2b083b05f0d98349b50cc)`(const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | 响应 [QCefQuery](QCefQuery.md#class_q_cef_query) 请求        
- `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId, const QString & code, const QString & url)` | 在指定的帧中执行javascript代码，此方法不报告javascript的结果。要获取 javascript 执行的结果，请使用[executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) 
- `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId, const QString & code, const QString & url, qint64 context)` | 在指定的帧中执行javascript代码，结果将通过[reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) 信号发送 
+ `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId, const QString & code, const QString & url)` | 在指定的frame中执行javascript代码，此方法不报告javascript的结果。要获取 javascript 执行的结果，请使用[executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065) 
+ `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId, const QString & code, const QString & url, qint64 context)` | 在指定的frame中执行javascript代码，结果将通过[reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) 信号发送 
  `public bool `[`setPreference`](#class_q_cef_view_1a2b4b3da8874855bbe2d558081233d948)`(const QString & name, const QVariant & value, const QString & error)` | 设置此浏览器的首选项                                         
  `public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` | 设置是否禁用弹出浏览器的上下文菜单                           
  `public bool `[`isPopupContextMenuDisabled`](#class_q_cef_view_1abb79735affb74166c0bed7f361ce1388)`()` | 获取是否禁用弹出浏览器的上下文菜单                           
@@ -224,12 +224,12 @@ class QCefView
 ---
 ### `public bool `[`triggerEvent`](#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event, qint64 frameId)` {#class_q_cef_view_1ab6afab6f26fb1a1b4f3b25d2fe9c2f13}
 
-触发指定帧的事件
+触发指定frame的事件
 
 #### 参数
 * `event` The [QCefEvent](QCefEvent.md#class_q_cef_event) instance
 
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 #### 返回值
 成功时为true;否则为false
@@ -237,7 +237,7 @@ class QCefView
 ---
 ### `public bool `[`broadcastEvent`](#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4)`(const `[`QCefEvent`](QCefEvent.md#class_q_cef_event)` & event)` {#class_q_cef_view_1ad5455e3a8cb0ffa1f9d7cb98307a6bb4}
 
-为所有帧广播事件
+为所有frame广播事件
 
 #### 参数
 * `event` [QCefEvent](QCefEvent.md#class_q_cef_event) 实例
@@ -259,10 +259,10 @@ class QCefView
 ---
 ### `public bool `[`executeJavascript`](#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8)`(qint64 frameId, const QString & code, const QString & url)` {#class_q_cef_view_1a79a5f1f466b1e8b96c89b24058194fe8}
 
-在指定的帧中执行javascript代码，此方法不报告javascript的结果。要获取 javascript 执行的结果，请使用 [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
+在指定的frame中执行javascript代码，此方法不报告javascript的结果。要获取 javascript 执行的结果，请使用 [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)
 
 #### 参数
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `code` JavaScript代码
 
@@ -274,10 +274,10 @@ class QCefView
 ---
 ### `public bool `[`executeJavascriptWithResult`](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)`(qint64 frameId, const QString & code, const QString & url, qint64 context)` {#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065}
 
-在指定的帧中执行javascript代码，结果将通过 [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) 信号发送
+在指定的frame中执行javascript代码，结果将通过 [reportJavascriptResult](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0) 信号发送
 
 #### 参数
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `code` JavaScript 代码
 
@@ -330,7 +330,7 @@ True 表示禁用;false 表示启用
  在创建弹出式浏览器之前被调用
 
 #### 参数
-* `frameId` 源帧 ID
+* `frameId` 源frame ID
 
 * `targetUrl` 目标网址
 
@@ -455,9 +455,9 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 表示浏览器 ID
 
-* `frameId` 表示帧 ID
+* `frameId` 表示frame ID
 
-* `isMainFrame` 表示这是否是主帧
+* `isMainFrame` 表示这是否是主frame
 
 * `transition_type` 过渡类型
 
@@ -469,9 +469,9 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 表示浏览器 ID
 
-* `frameId` 表示帧 ID
+* `frameId` 表示frame ID
 
-* `isMainFrame` 表示这是否是主帧
+* `isMainFrame` 表示这是否是主frame
 
 * `httpStatusCode` HTTP 状态代码
 
@@ -483,9 +483,9 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 表示浏览器 ID
 
-* `frameId` 表示帧 ID
+* `frameId` 表示frame ID
 
-* `isMainFrame` 表示这是否是主帧
+* `isMainFrame` 表示这是否是主frame
 
 * `errorCode` 错误代码
 
@@ -509,7 +509,7 @@ True 表示禁用;false 表示启用
 在网址更改时被调用
 
 #### 参数
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `url` 网址
 
@@ -579,7 +579,7 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 浏览器 ID
 
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `query` 查询请求
 
@@ -591,7 +591,7 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 浏览器 ID
 
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `method` 方法名称
 
@@ -605,7 +605,7 @@ True 表示禁用;false 表示启用
 #### 参数
 * `browserId` 浏览器 ID
 
-* `frameId` 帧 ID
+* `frameId` frame ID
 
 * `context` 上下文
 
