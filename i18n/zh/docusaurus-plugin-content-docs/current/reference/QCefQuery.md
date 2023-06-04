@@ -20,7 +20,7 @@ title: QCefQuery
  `public const QString `[`response`](#class_q_cef_query_1a663d5945146bebe69a0a3c5448bb9280)`() const` | 获取响应内容字符串     
  `public const bool `[`result`](#class_q_cef_query_1a8c2d78e19628d8066570338d659bc9b2)`() const` | 获取响应结果           
  `public const int `[`error`](#class_q_cef_query_1ab35201ac89d89f1445538f82a12f8fa8)`() const` | 获取响应错误           
- `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success, const QString & response, int error) const设置响应 |                        
+ `public void `[`setResponseResult`](#class_q_cef_query_1aa86db4e257e3dc4e29c7906d80e06f28)`(bool success, const QString & response, int error) const | 设置响应                       
  `private QScopedPointer< QCefQueryPrivate > `[`d_ptr`](#class_q_cef_query_1a3e84c15339bbf841b91a541222aed4e6) |                        
 
 ## Members
