@@ -40,6 +40,9 @@ class QCefView
  `public bool `[`setPreference`](#class_q_cef_view_1a2b4b3da8874855bbe2d558081233d948)`(const QString & name, const QVariant & value, const QString & error)` | 设置此浏览器的首选项                                         
  `public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` | 设置是否禁用弹出浏览器的上下文菜单                           
  `public bool `[`isPopupContextMenuDisabled`](#class_q_cef_view_1abb79735affb74166c0bed7f361ce1388)`()` | 获取是否禁用弹出浏览器的上下文菜单                           
+ `public bool `[`hasDevTools`](#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8)`()` | 检测此浏览器是否打开了devtools                               
+ `public void `[`showDevTools`](#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29)`()` | 打开 devtools 对话框                                         
+ `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` | 关闭 devtools 对话框                                         
  `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` | 请参考 `QWidget::setFocus`                                   
  `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` | 请参考`QWidget::inputMethodQuery`                            
  `protected virtual bool `[`onBeforePopup`](#class_q_cef_view_1a2889f3055a30625f39cecb697c15aa04)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, QRect & rect, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings)` | 在创建弹出式浏览器之前被调用                                 
@@ -75,10 +78,10 @@ class QCefView
  `{signal} public void `[`cefQueryRequest`](#class_q_cef_view_1a9085b5e19ee6eb1306ec29e40f09c6e3)`(int browserId, qint64 frameId, const `[`QCefQuery`](QCefQuery.md#class_q_cef_query)` & query)` | 在新的 [QCefQuery](QCefQuery.md#class_q_cef_query) 请求上被调用 
  `{signal} public void `[`invokeMethod`](#class_q_cef_view_1a221d07818d4f6766f72c68319fecc24e)`(int browserId, qint64 frameId, const QString & method, const QVariantList & arguments)` | 在从 Web 内容调用方法请求时调用（Javascript）                
  `{signal} public void `[`reportJavascriptResult`](#class_q_cef_view_1a3e5b637b042a2d17946a884f9bfc9bf0)`(int browserId, qint64 frameId, qint64 context, const QVariant & result)` | 对使用  [executeJavascriptWithResult](#class_q_cef_view_1ad4f331cdfc2ca2ed0ab019d2c8857065)  执行的 javascript 的结果进行调用 
- `{signal} public void `[`browserCreated`](#class_q_cef_view_1a8aaa698017d3d1f076531fc62a3cfd3a)`(`[`QCefView`](#class_q_cef_view)` * browser)` | 在创建主浏览器窗口后调用。不适用于 OSR 模式。                
+ `{signal} public void `[`nativeBrowserCreated`](#class_q_cef_view_1a543b0eca797c5161d6325665d5ddd576)`(QWindow * window)` | 在创建原生浏览器窗口后调用。不适用于 OSR 模式。              
  `{signal} public void `[`popupCreated`](#class_q_cef_view_1ab008a40ecfdd9a616e31b401514ac1e3)`(`[`QCefView`](#class_q_cef_view)` * popup)` | 在创建弹出式浏览器后立即调用                                 
- `{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()` |                                                              
- `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) | 表示 CEF 弹出窗口的打开配置            
+ `{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()` | 请参考`QWidget::setFocus`                                    
+ `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) | 表示 CEF 弹出窗口的打开配置                                  
  `private QScopedPointer< QCefViewPrivate > `[`d_ptr`](#class_q_cef_view_1a6882524bec20e1620311b3853750638f) |                                                              
 
 ## Members
@@ -313,6 +316,24 @@ class QCefView
 
 #### 返回值
 True 表示禁用;false 表示启用
+
+---
+### `public bool `[`hasDevTools`](#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8)`()` {#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8}
+
+检测此浏览器是否打开了devtools
+
+#### 返回值
+如果已经打开，则为 true; 否则为 false
+
+---
+### `public void `[`showDevTools`](#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29)`()` {#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29}
+
+打开 devtools 对话框
+
+---
+### `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` {#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7}
+
+关闭 devtools 对话框
 
 ---
 ### `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` {#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada}
@@ -612,9 +633,9 @@ True 表示禁用;false 表示启用
 * `result` 结果
 
 ---
-### `{signal} public void `[`browserCreated`](#class_q_cef_view_1a8aaa698017d3d1f076531fc62a3cfd3a)`(`[`QCefView`](#class_q_cef_view)` * browser)` {#class_q_cef_view_1a8aaa698017d3d1f076531fc62a3cfd3a}
+### `{signal} public void `[`nativeBrowserCreated`](#class_q_cef_view_1a543b0eca797c5161d6325665d5ddd576)`(QWindow * window)` {#class_q_cef_view_1a543b0eca797c5161d6325665d5ddd576}
 
-在创建主浏览器窗口后调用。不适用于 OSR 模式。
+在创建原生浏览器窗口后调用。不适用于 OSR 模式。
 
 #### 参数
 * `win` CEF 窗口
@@ -634,6 +655,7 @@ True 表示禁用;false 表示启用
 
 ---
 ### `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) {#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787}
+
 
 表示 CEF 弹出窗口的打开配置枚举
 
