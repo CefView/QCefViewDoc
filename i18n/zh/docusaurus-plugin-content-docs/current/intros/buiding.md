@@ -48,7 +48,7 @@ generate-win-x86_64.bat
 cmake --build .build/windows.x86_64
 ```
 
-生成项目之后也可以在目录`.build/Windows`中找到Visual Studio项目文件，使用Visual Studio打开和编译。
+生成项目之后也可以在目录`.build/windows.x86_64`中找到Visual Studio项目文件，使用Visual Studio打开和编译。
 
 ### macOS
 ```bash
@@ -59,7 +59,7 @@ cmake --build .build/windows.x86_64
 cmake --build ./build/macos.x86_64
 ```
 
-生成项目之后也可以在目录`.build/macOS`中找到Xcode项目文件，使用Xcode打开和编译。
+生成项目之后也可以在目录`.build/macos.x86_64`中找到Xcode项目文件，使用Xcode打开和编译。
 
 ### Linux 
 ```bash
