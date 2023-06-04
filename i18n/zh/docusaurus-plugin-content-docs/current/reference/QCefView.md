@@ -78,7 +78,7 @@ class QCefView
  `{signal} public void `[`browserCreated`](#class_q_cef_view_1a8aaa698017d3d1f076531fc62a3cfd3a)`(`[`QCefView`](#class_q_cef_view)` * browser)` | 在创建主浏览器窗口后调用。不适用于 OSR 模式。                
  `{signal} public void `[`popupCreated`](#class_q_cef_view_1ab008a40ecfdd9a616e31b401514ac1e3)`(`[`QCefView`](#class_q_cef_view)` * popup)` | 在创建弹出式浏览器后立即调用                                 
  `{slot} public inline void `[`setFocus`](#class_q_cef_view_1a9b1b42857e38a9f5c6c810fd51593788)`()` |                                                              
- `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) | Represents the CEF popup windows open disposition            
+ `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) | 表示 CEF 弹出窗口的打开配置            
  `private QScopedPointer< QCefViewPrivate > `[`d_ptr`](#class_q_cef_view_1a6882524bec20e1620311b3853750638f) |                                                              
 
 ## Members
@@ -635,7 +635,7 @@ True 表示禁用;false 表示启用
 ---
 ### `enum `[`CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787) {#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787}
 
-表示 CEF 弹出窗口打开布置
+表示 CEF 弹出窗口的打开配置枚举
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
