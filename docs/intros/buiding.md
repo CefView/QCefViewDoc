@@ -47,7 +47,7 @@ generate-win-x86_64.bat
 cmake --build .build/windows.x86_64
 ```
 
-Find the project file in folder .build /Windows, you can also open the project with Visual Studio and build it.
+Find the project file in folder .build /windows.x86_64, you can also open the project with Visual Studio and build it.
 
 ### macOS
 ```bash
@@ -58,7 +58,7 @@ Find the project file in folder .build /Windows, you can also open the project w
 cmake --build ./build/macos.x86_64
 ```
 
-Find the project file in folder .build /macOS, you can also open the project with Xcode and build it.
+Find the project file in folder .build /macos.x86_64, you can also open the project with Xcode and build it.
 
 ### Linux 
 ```bash
