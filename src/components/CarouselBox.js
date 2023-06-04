@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./CarouselBox.module.css";
 import ReactCardCarousel from "react-card-carousel";
+
+import styles from "./CarouselBox.module.css";
 
 const CardList = [
   {
