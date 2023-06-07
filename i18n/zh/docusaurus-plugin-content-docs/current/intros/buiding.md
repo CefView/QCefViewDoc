@@ -56,7 +56,7 @@ cmake --build .build/windows.x86_64
 ./generate-mac-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/macos.x86_64
+cmake --build .build/macos.x86_64
 ```
 
 生成项目之后也可以在目录`.build/macos.x86_64`中找到Xcode项目文件，使用Xcode打开和编译。
@@ -67,7 +67,7 @@ cmake --build ./build/macos.x86_64
 ./generate-linux-x86_64.sh
 
 # Build from cmake 
-cmake --build ./build/linux.x86_64
+cmake --build .build/linux.x86_64
 ```
 
 Linux平台推荐使用Qt Creator作为IDE。
