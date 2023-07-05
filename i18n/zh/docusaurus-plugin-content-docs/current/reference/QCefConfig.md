@@ -28,8 +28,8 @@ title: QCefConfig
  `public const `[`QCefConfig::LogLevel`](#class_q_cef_config_1ae437cd58b60d3902bba07e75a48d9a7c)` `[`logLevel`](#class_q_cef_config_1a8728d026571a97449e13e8502c34e5e5)`() const` | 获取日志级别                                    
  `public void `[`setLocale`](#class_q_cef_config_1af67e837996a1dd84af0866f76588ba4e)`(const QString & locale)` | 设置区域                                        
  `public const QString `[`locale`](#class_q_cef_config_1ac1d5ca26f596c9f3e7697da04e549414)`() const` | 获取区域                                        
- `public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)` | 设置代理                                        
- `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const` | 获取代理                                        
+ `public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)` | 设置User-Agent                                      
+ `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const` | 获取User-Agent                                        
  `public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)` | 设置缓存路径                                    
  `public const QString `[`cachePath`](#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3)`() const` | 获取缓存路径                                    
  `public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)` | 设置用户数据目录路径                            
@@ -176,15 +176,15 @@ OSR 模式的启用/禁用的标志
 ---
 ### `public void `[`setUserAgent`](#class_q_cef_config_1a60009aad390599eb5857182a32de7f23)`(const QString & agent)` {#class_q_cef_config_1a60009aad390599eb5857182a32de7f23}
 
-设置代理
+设置User-Agent
 
 #### 参数
-* `agent` 用户代理
+* `agent` User-Agent
 
 ---
 ### `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const` {#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016}
 
-获取代理
+获取User-Agent
 
 ---
 ### `public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)` {#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8}
