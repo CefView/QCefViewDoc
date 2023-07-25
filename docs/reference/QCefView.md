@@ -43,6 +43,8 @@ Represents the CEF browser view.
 `public bool `[`hasDevTools`](#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8)`()`                  | Detects whether this browser has a devtools opened.
 `public void `[`showDevTools`](#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29)`()`                  | Opens the devtools dialog.
 `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()`                  | Closes the devtools dialog.
+`public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)`                  | Sets whether to enable drag and drop.
+`public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const`                  | Gets whether to enable drag and drop.
 `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)`                  | Please refer to QWidget::setFocus.
 `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const`                  | Please refer to QWidget::inputMethodQuery.
 `protected virtual bool `[`onBeforePopup`](#class_q_cef_view_1a2889f3055a30625f39cecb697c15aa04)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, QRect & rect, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings)`                  | Gets called before the popup browser created.
@@ -307,6 +309,9 @@ Sets the preference for this browser.
 
 * `error` The error message populated on failure
 
+#### Returns
+True on successful; otherwise false
+
 ---
 ### `public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` {#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b}
 
@@ -340,6 +345,24 @@ Opens the devtools dialog.
 ### `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` {#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7}
 
 Closes the devtools dialog.
+
+---
+### `public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)` {#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb}
+
+Sets whether to enable drag and drop.
+
+#### Parameters
+* `enable` True to enable; otherwise false
+
+This function does not work for OSR mode. There is a problem, when dragging a file to a non dragging area, the content of the file will be displayed. You need to solve the problem yourself.
+
+---
+### `public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const` {#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a}
+
+Gets whether to enable drag and drop.
+
+#### Returns
+True to enable; otherwise false
 
 ---
 ### `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` {#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada}

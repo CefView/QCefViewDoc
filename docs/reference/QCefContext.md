@@ -20,6 +20,9 @@ Represents the CEF context.
 `public void `[`addLocalFolderResource`](#class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454)`(const QString & path, const QString & url, int priority)`                  | Adds a url mapping item with local web resource directory. This works for all  instances created subsequently.
 `public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path, const QString & url, const QString & password, int priority)`                  | Adds a url mapping item with local archive (.zip) file which contains the web resource. This works for all  instances created subsequently.
 `public bool `[`addCookie`](#class_q_cef_context_1a6d2e90de7fb5fcf2b7e7a6581d26e62c)`(const QString & name, const QString & value, const QString & domain, const QString & url)`                  | Adds a cookie to the CEF context, this cookie is accessible from all browsers created with this context.
+`public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Adds an entry to the cross-origin access whitelist.
+`public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Removes an entry from the cross-origin access whitelist.
+`public bool `[`clearCrossOriginWhitelistEntry`](#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4)`()`                  | Removes all entries from the cross-origin access whitelist.
 `public const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * `[`cefConfig`](#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e)`() const`                  | Gets the [QCefConfig](QCefConfig.md#class_q_cef_config).
 `protected bool `[`init`](#class_q_cef_context_1a78836c8d4d2bdf4970a256d8d29c80c6)`(const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * config)`                  | Initialize the CEF context.
 `protected void `[`uninit`](#class_q_cef_context_1aee74a7460786ddc17f8f9c0f68eaab6b)`()`                  | Uninitialize the CEF context.
@@ -89,6 +92,39 @@ Adds a cookie to the CEF context, this cookie is accessible from all browsers cr
 
 #### Returns
 True on success; otherwise false
+
+---
+### `public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267}
+
+Adds an entry to the cross-origin access whitelist.
+
+#### Parameters
+* `sourceOrigin` 
+* `targetSchema` 
+* `targetDomain` 
+* `allowTargetSubdomains` 
+
+#### Returns
+True on success; otherwise false
+
+---
+### `public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8}
+
+Removes an entry from the cross-origin access whitelist.
+
+#### Parameters
+* `sourceOrigin` 
+* `targetSchema` 
+* `targetDomain` 
+* `allowTargetSubdomains` 
+
+#### Returns
+True on success; otherwise false
+
+---
+### `public bool `[`clearCrossOriginWhitelistEntry`](#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4)`()` {#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4}
+
+Removes all entries from the cross-origin access whitelist.
 
 ---
 ### `public const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * `[`cefConfig`](#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e)`() const` {#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e}

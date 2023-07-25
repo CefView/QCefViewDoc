@@ -43,6 +43,8 @@ class QCefView
  `public bool `[`hasDevTools`](#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8)`()` | 检测此浏览器是否打开了devtools                               
  `public void `[`showDevTools`](#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29)`()` | 打开 devtools 对话框                                         
  `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` | 关闭 devtools 对话框                                         
+`public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)`                  | Sets whether to enable drag and drop.
+`public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const`                  | Gets whether to enable drag and drop.     
  `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` | 请参考 `QWidget::setFocus`                                   
  `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` | 请参考`QWidget::inputMethodQuery`                            
  `protected virtual bool `[`onBeforePopup`](#class_q_cef_view_1a2889f3055a30625f39cecb697c15aa04)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, QRect & rect, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings)` | 在创建弹出式浏览器之前被调用                                 
@@ -301,6 +303,9 @@ class QCefView
 * `value` 首选项值，如果此值为 `QVariant::UnknownType` 或者 `QVariant::Invalid`, 则首选项将恢复为默认值
 * `error` 失败时填充的错误消息
 
+#### 返回值
+成功时为true;否则为false
+
 ---
 ### `public void `[`setDisablePopupContextMenu`](#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b)`(bool disable)` {#class_q_cef_view_1acca71443b26dce09e81e3f937cedaa6b}
 
@@ -334,6 +339,24 @@ True 表示禁用;false 表示启用
 ### `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` {#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7}
 
 关闭 devtools 对话框
+
+---
+### `public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)` {#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb}
+
+设置是否启用拖拽
+
+#### 参数
+* `enable` True 表示启用;false 表示禁用
+
+不适用于OSR模式。注意这里有一个问题，当将文件拖动到非拖动区域时，将显示该文件的内容。你需要自己解决这个问题。
+
+---
+### `public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const` {#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a}
+
+获取是否启用拖拽
+
+#### 返回值
+True 表示启用;false 表示禁用
 
 ---
 ### `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` {#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada}
