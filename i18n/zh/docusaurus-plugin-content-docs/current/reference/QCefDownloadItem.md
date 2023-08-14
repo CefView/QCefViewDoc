@@ -54,6 +54,8 @@ QCefDownloadItem 析构函数
 + `path` 保存下载项的完整路径名(必须包括文件名)
 + `useDefaultDialog` 是否使用默认的“另存为...”对话框
 
+仅当 `useDefaultDialog` 设置为 false 时，`path` 参数才有效。如果将 `useDefaultDialog` 设置为 true，则无法控制打开的"另存为..."对话框的初始位置，它由 CEF 内部实现决定。
+
 ---
 ### `public void `[`pause`](#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568)`() const` {#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568}
 
