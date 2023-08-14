@@ -54,6 +54,8 @@ Starts to download the item.
 
 * `useDefaultDialog` Whether to use the default 'Save As...' dialog or not
 
+The 'path' parameter only works when 'useDefaultDialog' is set to false. If you set 'useDefaultDialog' to true then you cannot control the initial location of the opened 'Save As...' dialog, it is determined by CEF internal implementation.
+
 ---
 ### `public void `[`pause`](#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568)`() const` {#class_q_cef_download_item_1aaa31f59599e9311f0aee99a0a13e2568}
 
