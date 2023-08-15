@@ -71,7 +71,7 @@ class QCefView
  `{signal} public void `[`draggableRegionChanged`](#class_q_cef_view_1ae11274817f627abf9d407e12dcd5c050)`(const QRegion & draggableRegion, const QRegion & nonDraggableRegion)` | 在可拖动区域更改时调用                                       
  `{signal} public void `[`addressChanged`](#class_q_cef_view_1a89ce3bc031d5dcd1115482118a6c4181)`(qint64 frameId, const QString & url)` | 在网址更改时被调用                                           
  `{signal} public void `[`titleChanged`](#class_q_cef_view_1a48c82c208cab769a1baa7177bc58b030)`(const QString & title)` | 网站标题更改时被调用                                         
- `{signal} public void `[`faviconURLChanged`](#class_q_cef_view_1a7b9e104469c1a4a203c2e1d7e9cfd2a7)`(const QStringList & urls)` | 网站图标地址更改时被调用 changed                             
+ `{signal} public void `[`faviconURLChanged`](#class_q_cef_view_1a7b9e104469c1a4a203c2e1d7e9cfd2a7)`(const QStringList & urls)` | 网站图标地址更改时被调用                             
  `{signal} public void `[`faviconChanged`](#class_q_cef_view_1aa5d4a7098414f929a4ca7dd6b72d0893)`(const QIcon & icon)` | 网站图标更改时被调用                                         
  `{signal} public void `[`fullscreenModeChanged`](#class_q_cef_view_1afa0fbb5b4c2c6c3592085e9b94dffc4a)`(bool fullscreen)` | 在全屏模式更改时被调用                                       
  `{signal} public void `[`statusMessage`](#class_q_cef_view_1a86d10c28b8821a36723e3504fa0cc7e7)`(const QString & message)` | 状态消息更改时被调用                                         
