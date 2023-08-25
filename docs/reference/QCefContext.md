@@ -21,8 +21,8 @@ Represents the CEF context.
 `public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path, const QString & url, const QString & password, int priority)`                  | Adds a url mapping item with local archive (.zip) file which contains the web resource. This works for all  instances created subsequently.
 `public bool `[`addCookie`](#class_q_cef_context_1a6d2e90de7fb5fcf2b7e7a6581d26e62c)`(const QString & name, const QString & value, const QString & domain, const QString & url)`                  | Adds a cookie to the CEF context, this cookie is accessible from all browsers created with this context.
 `public bool `[`deleteAllCookies`](#class_q_cef_context_1a794e41a74ddabc503bed5e8c47fe3dd0)`()`                  | Deletes all cookies from the CEF context.
-`public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Adds an entry to the cross-origin access whitelist.
-`public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Removes an entry from the cross-origin access whitelist.
+`public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Adds an entry to the cross-origin access whitelist. For details please refer to: [https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23).
+`public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)`                  | Removes an entry from the cross-origin access whitelist. For details please refer to: [https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12).
 `public bool `[`clearCrossOriginWhitelistEntry`](#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4)`()`                  | Removes all entries from the cross-origin access whitelist.
 `public const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * `[`cefConfig`](#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e)`() const`                  | Gets the [QCefConfig](QCefConfig.md#class_q_cef_config).
 `protected bool `[`init`](#class_q_cef_context_1a78836c8d4d2bdf4970a256d8d29c80c6)`(const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * config)`                  | Initialize the CEF context.
@@ -105,13 +105,16 @@ True on success; otherwise false
 ---
 ### `public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267}
 
-Adds an entry to the cross-origin access whitelist.
+Adds an entry to the cross-origin access whitelist. For details please refer to: [https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23).
 
 #### Parameters
-* `sourceOrigin` 
-* `targetSchema` 
-* `targetDomain` 
-* `allowTargetSubdomains` 
+* `sourceOrigin` The source origin
+
+* `targetSchema` The target schema
+
+* `targetDomain` The target domain
+
+* `allowTargetSubdomains` Whether to allow subdomain or not
 
 #### Returns
 True on success; otherwise false
@@ -119,13 +122,16 @@ True on success; otherwise false
 ---
 ### `public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8}
 
-Removes an entry from the cross-origin access whitelist.
+Removes an entry from the cross-origin access whitelist. For details please refer to: [https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12).
 
 #### Parameters
-* `sourceOrigin` 
-* `targetSchema` 
-* `targetDomain` 
-* `allowTargetSubdomains` 
+* `sourceOrigin` The source origin
+
+* `targetSchema` The target schema
+
+* `targetDomain` The target domain
+
+* `allowTargetSubdomains` Whether to allow subdomain or not
 
 #### Returns
 True on success; otherwise false

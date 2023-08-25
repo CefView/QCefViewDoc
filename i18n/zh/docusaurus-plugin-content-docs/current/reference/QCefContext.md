@@ -20,10 +20,10 @@ class QCefContext
  `public void `[`addLocalFolderResource`](#class_q_cef_context_1aecc6f7ee9d296bcf8d2ba470e0c0e454)`(const QString & path, const QString & url, int priority)` | 添加具有本地 Web 资源目录的 url 映射项。这适用于随后创建的所有实例 
  `public void `[`addArchiveResource`](#class_q_cef_context_1aba9c70a84379190d151bdc4b634367e6)`(const QString & path, const QString & url, const QString & password, int priority)` | 使用包含 Web 资源的本地存档 （.zip） 文件添加 url 映射项。这适用于随后创建的所有实例 
  `public bool `[`addCookie`](#class_q_cef_context_1a6d2e90de7fb5fcf2b7e7a6581d26e62c)`(const QString & name, const QString & value, const QString & domain, const QString & url)` | 将 Cookie 添加到 CEF 上下文，可从使用此上下文创建的所有浏览器访问此 Cookie 
- `public bool `[`deleteAllCookies`](#class_q_cef_context_1a794e41a74ddabc503bed5e8c47fe3dd0)`()`                  | 从 CEF 上下文中删除所有 cookie
- `public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` | 将条目添加到跨域访问白名单中                                 
- `public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` | 从跨域访问白名单中删除一个条目                               
- `public bool `[`clearCrossOriginWhitelistEntry`](#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4)`()` | 从跨域访问白名单中删除所有条目                               
+ `public bool `[`deleteAllCookies`](#class_q_cef_context_1a794e41a74ddabc503bed5e8c47fe3dd0)`()` | 从 CEF 上下文中删除所有 cookie
+ `public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` | 将条目添加到跨域访问白名单中。详情请参阅：[https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23) 
+ `public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` | 从跨域访问白名单中删除一个条目。详情请参阅：[https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12)                 
+ `public bool `[`clearCrossOriginWhitelistEntry`](#class_q_cef_context_1a95d71c83fef34e8218a8ce559f173ab4)`()` | 从跨域访问白名单中删除所有条目
  `public const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * `[`cefConfig`](#class_q_cef_context_1acfd6416ebc0a8df5cf8961dadeff960e)`() const` | 获取 [QCefConfig](QCefConfig.md#class_q_cef_config)          
  `protected bool `[`init`](#class_q_cef_context_1a78836c8d4d2bdf4970a256d8d29c80c6)`(const `[`QCefConfig`](QCefConfig.md#class_q_cef_config)` * config)` | 初始化 CEF 上下文                                            
  `protected void `[`uninit`](#class_q_cef_context_1aee74a7460786ddc17f8f9c0f68eaab6b)`()` | 取消初始化 CEF 上下文                                        
@@ -102,13 +102,13 @@ True 为成功; 其他为 false
 ---
 ### `public bool `[`addCrossOriginWhitelistEntry`](#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1aaba077228a77f5e7d7491eda3ce10267}
 
-将条目添加到跨域访问白名单
+将条目添加到跨域访问白名单。详情请参阅：[https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L81C23-L81C23)
 
 #### 参数
-* `sourceOrigin` 
-* `targetSchema` 
-* `targetDomain` 
-* `allowTargetSubdomains` 
+* `sourceOrigin` 源头
+* `targetSchema` 目标模式
+* `targetDomain` 目标域
+* `allowTargetSubdomains` 是否允许子域
 
 #### 返回值
 True 为成功; 其他为 false
@@ -116,13 +116,13 @@ True 为成功; 其他为 false
 ---
 ### `public bool `[`removeCrossOriginWhitelistEntry`](#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8)`(const QString & sourceOrigin, const QString & targetSchema, const QString & targetDomain, bool allowTargetSubdomains)` {#class_q_cef_context_1af04aefeea503031f5a8fbdabf05bc5e8}
 
-从跨域访问白名单中删除一个条目
+从跨域访问白名单中删除一个条目。详情请参阅：[https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12](https://github.com/chromiumembedded/cef/blob/605c2bac86415dcec1e2902cdc46dc11c1ad026a/include/cef_origin_whitelist.h#L91C12-L91C12)
 
 #### 参数
-* `sourceOrigin` 
-* `targetSchema` 
-* `targetDomain` 
-* `allowTargetSubdomains` 
+* `sourceOrigin` 源头
+* `targetSchema` 目标模式
+* `targetDomain` 目标域
+* `allowTargetSubdomains` 是否允许子域
 
 #### 返回值
 True 为成功; 其他为 false

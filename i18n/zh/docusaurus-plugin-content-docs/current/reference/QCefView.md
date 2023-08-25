@@ -43,8 +43,8 @@ class QCefView
  `public bool `[`hasDevTools`](#class_q_cef_view_1a85fd904cbd3b91a72ce090cffb0119c8)`()` | 检测此浏览器是否打开了devtools                               
  `public void `[`showDevTools`](#class_q_cef_view_1a61845e6e370a57be5f3662ba37cd7b29)`()` | 打开 devtools 对话框                                         
  `public void `[`closeDevTools`](#class_q_cef_view_1abdf0a68139fe9163ecd9b5a0cdeed6d7)`()` | 关闭 devtools 对话框                                         
-`public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)`                  | Sets whether to enable drag and drop.
-`public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const`                  | Gets whether to enable drag and drop.     
+`public void `[`setEnableDragAndDrop`](#class_q_cef_view_1af73ef1d6f77a31b528c729cf7379abfb)`(bool enable)`                  | 设置是否启用拖拽
+`public bool `[`isDragAndDropEnabled`](#class_q_cef_view_1a2a8a2ebaedb88ccd80536c66d878ff8a)`() const`                  | 获取是否启用拖拽    
  `public void `[`setFocus`](#class_q_cef_view_1a61ad737cd2354021f8310f323f4f8ada)`(Qt::FocusReason reason)` | 请参考 `QWidget::setFocus`                                   
  `public QVariant `[`inputMethodQuery`](#class_q_cef_view_1af25a011c126a9bb5dc3df99756a75368)`(Qt::InputMethodQuery query) const` | 请参考`QWidget::inputMethodQuery`                            
  `protected virtual bool `[`onBeforePopup`](#class_q_cef_view_1a2889f3055a30625f39cecb697c15aa04)`(qint64 frameId, const QString & targetUrl, const QString & targetFrameName, `[`QCefView::CefWindowOpenDisposition`](#class_q_cef_view_1a9963d810f8aa71b45b1b10f0abbe8787)` targetDisposition, QRect & rect, `[`QCefSetting`](QCefSetting.md#class_q_cef_setting)` & settings)` | 在创建弹出式浏览器之前被调用                                 
