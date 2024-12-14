@@ -4,7 +4,9 @@ sidebar_position: 4
 
 # CefViewQuery 
 
-[`window.CefViewQuery`](/docs/reference/WebAPIs#web_apis_CefViewQuery)`(query)` is yet another approach to communicate from Javascript to C++ code, but in this way the communication is `ASYNCHRONOUS` operation. For more details please refer to the API reference.
+**⚠[DEPRECATED]**<br></br>~~[`window.CefViewQuery`](/docs/reference/WebAPIs#web_apis_CefViewQuery)`(query)` is yet another approach to communicate from Javascript to C++ code, but in this way the communication is `ASYNCHRONOUS` operation. For more details please refer to the API reference.~~  
+
+[`window.cefViewQuery`](/docs/reference/WebAPIs#web_apis_cefViewQuery)`(query)` is yet another approach to communicate from Javascript to C++ code, but in this way the communication is `ASYNCHRONOUS` operation. For more details please refer to the API reference.
 
 When this method gets called from Javascript, the following Qt signal will be emitted:
 
@@ -25,7 +27,8 @@ Add Javascript code as follows:
           alert(error_message);
         },
       };
-      window.CefViewQuery(query);
+      // ⚠[DEPRECATED]window.CefViewQuery(query);
+      window.cefViewQuery(query);
     }
 ```
 Add HTML code as follows:

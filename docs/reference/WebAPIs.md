@@ -10,9 +10,11 @@ QCefView added the Javascript bridge object `CefViewClient` to `window` object f
 ### Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-[`addEventListener`](#web_apis_addEventListener)`(name, listener)` | Adds a listener for the event with specified name
-[`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` | Removes the listener for the event with specified name
-[`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` | Invokes a native method with the specified name and arguments
+[`addEventListener`](#web_apis_addEventListener)`(name, listener)` | Adds a listener for the event with specified name  
+[`removeEventListener`](#web_apis_removeEventListener)`(name, listener)` | Removes the listener for the event with specified name  
+**⚠[DEPRECATED]**<br></br>~~[`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)`~~ | ~~Invokes a native method with the specified name and arguments~~  
+[`invoke`](#web_apis_invoke)`(name, ...args)` | Invokes a native method with the specified name and arguments  
+---
 
 ### Members
 
@@ -35,7 +37,15 @@ Removes the listener for the event with specified name
 * `listener` The listener callback function
 
 ---
-#### [`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)` <a class="anchor" id="web_apis_invokeMethod"></a>
+#### ~~[`invokeMethod`](#web_apis_invokeMethod)`(name, ...args)`~~ <a class="anchor" id="web_apis_invokeMethod"></a>
+
+~~Invokes a native method with the specified name and arguments~~
+
+##### ~~Parameters~~
+~~* `name` The method name~~
+~~* `..args` The arguments for the method~~
+
+#### [`invoke`](#web_apis_invoke)`(name, ...args)` <a class="anchor" id="web_apis_invoke"></a>
 
 Invokes a native method with the specified name and arguments
 
@@ -51,13 +61,34 @@ QCefView added some extra methods to the `window` object for all browsers frames
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-[`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` | Sends a cef query request to the native context
-[`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` | Cancels the query request with the specified id
-
+**⚠[DEPRECATED]**<br></br>~~[`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)`~~ | ~~Sends a cef query request to the native context~~  
+[`window.cefViewQuery`](#web_apis_cefViewQuery)`(query)` | Sends a cef query request to the native context  
+**⚠[DEPRECATED]**<br></br>~~[`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)`~~ | ~~Cancels the query request with the specified id~~  
+[`window.cefViewQueryCancel`](#web_apis_cefViewQueryCancel)`(id)` | Cancels the query request with the specified id  
+---
 ### Members
 
 ---
-#### [`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)` <a class="anchor" id="web_apis_CefViewQuery"></a>
+#### ~~[`window.CefViewQuery`](#web_apis_CefViewQuery)`(query)`~~ <a class="anchor" id="web_apis_CefViewQuery"></a>
+
+~~Sends a cef query request to the native context~~
+
+##### ~~Parameters~~
+~~* `query` The query object~~
+
+##### ~~Returns~~
+~~* The query id~~
+
+---
+#### ~~[`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)`~~ <a class="anchor" id="web_apis_CefViewQueryCancel"></a>
+
+~~Cancels the query request with the specified id~~
+
+##### ~~Parameters~~
+~~* `id` The query id~~
+
+---
+#### [`window.cefViewQuery`](#web_apis_cefViewQuery)`(query)` <a class="anchor" id="web_apis_cefViewQuery"></a>
 
 Sends a cef query request to the native context
 
@@ -68,9 +99,10 @@ Sends a cef query request to the native context
 * The query id
 
 ---
-#### [`window.CefViewQueryCancel`](#web_apis_CefViewQueryCancel)`(id)` <a class="anchor" id="web_apis_CefViewQueryCancel"></a>
+#### [`window.cefViewQueryCancel`](#web_apis_cefViewQueryCancel)`(id)` <a class="anchor" id="web_apis_cefViewQueryCancel"></a>
 
 Cancels the query request with the specified id
 
 ##### Parameters
 * `id` The query id
+

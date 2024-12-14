@@ -14,13 +14,15 @@ The approach of the interoperability was implemented by inserting a bridge objec
 
 The bridge object provides the following method to invoke C++ code from Javascript
 
-[`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`,
+**⚠[DEPRECATED]**<br></br>~~[`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`~~
+
+[`invoke`](/docs/reference/WebAPIs#web_apis_invoke)`(name, ...args)`
 
 When this method gets called from Javascript, the following Qt signal will be emitted
 
 `void `[`invokeMethod`](/docs/reference/QCefView#class_q_cef_view_1aa407f7491139a2d5331566c8346a58c8)`(int browserId,int frameId,const QString & method,const QVariantList & arguments)`
 
-> **⚠ NOTE: The Javascript method [`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)` is `ASYNCHRONOUS` operation, that means the calling from Javascript returns immediately regardless the execution of C++ Qt slot**
+> **⚠ NOTE: The Javascript method [`invoke`](/docs/reference/WebAPIs#web_apis_invoke)`(name, ...args)` is `ASYNCHRONOUS` operation, that means the calling from Javascript returns immediately regardless the execution of C++ Qt slot**
 
 Now let's write a small piece of code to demonstrate the invocation from Javascript to C++.
 

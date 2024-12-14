@@ -14,13 +14,15 @@ QCefView提供C++/Javascript互操作的能力，因此开发者可以从C++中�
 
 桥接对象提供以下方法来从Javascript中调用C++：
 
-[`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`,
+**⚠[废弃]**<br></br>~~[`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`~~  
+
+[`invoke`](/docs/reference/WebAPIs#web_apis_invoke)`(name, ...args)`,
 
 当该方法在Javascript中调用后，下面的Qt signal将被触发：
 
 `void `[`invokeMethod`](/docs/reference/QCefView#class_q_cef_view_1aa407f7491139a2d5331566c8346a58c8)`(int browserId,int frameId,const QString & method,const QVariantList & arguments)`
 
-> **⚠ 注意: Javascript方法[`invokeMethod`](/docs/reference/WebAPIs#web_apis_invokeMethod)`(name, ...args)`是 `异步`操作，这意味着该方法的调用会立即返回，无论对应的C++ Qt slot是否已经执行完毕。**
+> **⚠ 注意: Javascript方法[`invoke`](/docs/reference/WebAPIs#web_apis_invoke)`(name, ...args)`是 `异步`操作，这意味着该方法的调用会立即返回，无论对应的C++ Qt slot是否已经执行完毕。**
 
 现在让我们编写一段代码来演示如何从Javascript中调用C++。
 
@@ -30,7 +32,8 @@ QCefView提供C++/Javascript互操作的能力，因此开发者可以从C++中�
 ```javascript
     function onInvokeMethodClicked(name, ...arg) {
       // invoke C++ code
-      window.CallBridge.invokeMethod(name, ...arg);
+      // ⚠[DEPRECATED]window.CallBridge.invokeMethod(name, ...arg); 
+      window.CallBridge.invoke(name, ...arg);
     }
 ```
 

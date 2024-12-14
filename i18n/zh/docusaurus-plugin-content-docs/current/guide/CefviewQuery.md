@@ -4,7 +4,9 @@ sidebar_position: 3
 
 # CefViewQuery 
 
-[`window.CefViewQuery`](/docs/reference/WebAPIs#web_apis_CefViewQuery)`(query)`是另一种从Javascript中向C++中通信的机制，这种方式的通信是`异步`操作。更多详细介绍请参见API文档。
+**⚠[废弃]**<br></br>~~[`window.CefViewQuery`](/docs/reference/WebAPIs#web_apis_CefViewQuery)`(query)`是另一种从Javascript中向C++中通信的机制，这种方式的通信是`异步`操作。更多详细介绍请参见API文档。~~~
+
+[`window.cefViewQuery`](/docs/reference/WebAPIs#web_apis_cefViewQuery)`(query)`是另一种从Javascript中向C++中通信的机制，这种方式的通信是`异步`操作。更多详细介绍请参见API文档。
 
 当从Javascript中调用该方法时，以下Qt signal会被触发：
 
@@ -26,7 +28,8 @@ sidebar_position: 3
           alert(error_message);
         },
       };
-      window.CefViewQuery(query);
+      // ⚠[DEPRECATED] window.CefViewQuery(query);
+      window.cefViewQuery(query);
     }
 ```
 

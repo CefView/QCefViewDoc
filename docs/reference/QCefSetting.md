@@ -14,7 +14,9 @@ Represents the settings for individual browser.
 `public  `[`QCefSetting`](#class_q_cef_setting_1af650fcab674f8c33a996a2d8cd34eaef)`(const `[`QCefSetting`](#class_q_cef_setting)` & other)`                  | Constructs the [QCefSetting](#class_q_cef_setting) instance from existing one.
 `public `[`QCefSetting`](#class_q_cef_setting)` & `[`operator=`](#class_q_cef_setting_1a486f0c9edda93fb30c75608ac9b98ba2)`(const `[`QCefSetting`](#class_q_cef_setting)` & other)`                  | Assigns the existing [QCefSetting](#class_q_cef_setting) instance to current.
 `public  `[`~QCefSetting`](#class_q_cef_setting_1a589b16fe883213d0e330503c0ccab218)`()`                  | Destructs the instance.
-`public void `[`setStandardFontFamily`](#class_q_cef_setting_1a882bfa1507ecea7d13dafc432c541585)`(const QString value)`                  | Sets the standard font family.
+`public void `[`setWindowInitialSize`](#class_q_cef_setting_1a629a1139dff88c3bb85a4c9a620d0682)`(const QSize & size)`                  | Sets the initial size of the browser.
+`public const QSize `[`windowInitialSize`](#class_q_cef_setting_1ad3aabefb7879e392952a94464c983978)`() const`                  | Gets the initial size of the browser.
+`public void `[`setStandardFontFamily`](#class_q_cef_setting_1ad021537af966fb8f17d8a07066a5408e)`(const QString & value)`                  | Sets the standard font family.
 `public const QString `[`standardFontFamily`](#class_q_cef_setting_1aa7a0cfa4086251bdfc95c4ae72e52896)`() const`                  | Gets the standard font family.
 `public void `[`setFixedFontFamily`](#class_q_cef_setting_1af11ccd0529a79efee12a3e728d24e641)`(const QString & value)`                  | Sets the fixed font family.
 `public const QString `[`fixedFontFamily`](#class_q_cef_setting_1a239e1982f4ab4198a62f9c00ae17bcbb)`() const`                  | Gets the fixed font family.
@@ -28,8 +30,6 @@ Represents the settings for individual browser.
 `public const QString `[`fantasyFontFamily`](#class_q_cef_setting_1a0acd7303ff77ae1eff9fa579fc96e97a)`() const`                  | Gets the fantasy font family.
 `public void `[`setDefaultEncoding`](#class_q_cef_setting_1a599a011dff8d11c8201036238016a77f)`(const QString & value)`                  | Sets the default encoding.
 `public const QString `[`defaultEncoding`](#class_q_cef_setting_1a2de89967072377f279b36e821bde18e1)`() const`                  | Gets the default encoding.
-`public void `[`setAcceptLanguageList`](#class_q_cef_setting_1af98c67b11610aa7d62cfae040086afcb)`(const QString & value)`                  | Sets the acceptable language list.
-`public const QString `[`acceptLanguageList`](#class_q_cef_setting_1aee323c86faebc36358a92c931c500478)`() const`                  | Gets the acceptable language list.
 `public void `[`setWindowlessFrameRate`](#class_q_cef_setting_1a4a5810da8e070288ff80c069f5b52f23)`(const int value)`                  | Sets the frame rate in window less mode.
 `public const QVariant `[`windowlessFrameRate`](#class_q_cef_setting_1adfc424688213e0e695b6b84681581135)`() const`                  | Gets the frame rate in window less mode.
 `public void `[`setDefaultFontSize`](#class_q_cef_setting_1a85b9cadc6df83a3addbaf567df791339)`(const int value)`                  | Sets the default font size.
@@ -50,8 +50,6 @@ Represents the settings for individual browser.
 `public const QVariant `[`javascriptAccessClipboard`](#class_q_cef_setting_1aff511401ea2d0453583db4b642526dbd)`() const`                  | Gets whether to enable or disable the permission of accessing clipboard from Javascript.
 `public void `[`setJavascriptDomPaste`](#class_q_cef_setting_1a61c6207fc6fb05b71248fee8766d21a2)`(const bool value)`                  | Sets to enable or disable the permission of pasting DOM in Javascript.
 `public const QVariant `[`javascriptDomPaste`](#class_q_cef_setting_1a6696cc8fa0b4ea1ef14d71259cd4350d)`() const`                  | Gets whether to enable or disable the permission of pasting DOM in Javascript.
-`public void `[`setPlugins`](#class_q_cef_setting_1afd5813a87ece2924265a90544885e2c0)`(const bool value)`                  | Sets to enable or disable plugins.
-`public const QVariant `[`plugins`](#class_q_cef_setting_1a99c3a6c649171d42402af815f6628f03)`() const`                  | Gets whether to enable or disable plugins.
 `public void `[`setImageLoading`](#class_q_cef_setting_1a15457b991b298a722cbc9f9507d109fb)`(const bool value)`                  | Sets to enable or disable the permission of loading images.
 `public const QVariant `[`imageLoading`](#class_q_cef_setting_1aa06779c82a28a01bd862ac605356be40)`() const`                  | Gets whether to enable or disable the permission of loading images.
 `public void `[`setImageShrinkStandaloneToFit`](#class_q_cef_setting_1a562e4477613234a906b2d167473b0627)`(const bool value)`                  | Sets to enable or disable the shrinking image standalone to fit.
@@ -99,7 +97,22 @@ Assigns the existing [QCefSetting](#class_q_cef_setting) instance to current.
 Destructs the instance.
 
 ---
-### `public void `[`setStandardFontFamily`](#class_q_cef_setting_1a882bfa1507ecea7d13dafc432c541585)`(const QString value)` {#class_q_cef_setting_1a882bfa1507ecea7d13dafc432c541585}
+### `public void `[`setWindowInitialSize`](#class_q_cef_setting_1a629a1139dff88c3bb85a4c9a620d0682)`(const QSize & size)` {#class_q_cef_setting_1a629a1139dff88c3bb85a4c9a620d0682}
+
+Sets the initial size of the browser.
+
+#### Parameters
+* `size` The initial size
+
+---
+### `public const QSize `[`windowInitialSize`](#class_q_cef_setting_1ad3aabefb7879e392952a94464c983978)`() const` {#class_q_cef_setting_1ad3aabefb7879e392952a94464c983978}
+
+Gets the initial size of the browser.
+
+#### Returns
+
+---
+### `public void `[`setStandardFontFamily`](#class_q_cef_setting_1ad021537af966fb8f17d8a07066a5408e)`(const QString & value)` {#class_q_cef_setting_1ad021537af966fb8f17d8a07066a5408e}
 
 Sets the standard font family.
 
@@ -209,22 +222,6 @@ Gets the default encoding.
 
 #### Returns
 The encoding name
-
----
-### `public void `[`setAcceptLanguageList`](#class_q_cef_setting_1af98c67b11610aa7d62cfae040086afcb)`(const QString & value)` {#class_q_cef_setting_1af98c67b11610aa7d62cfae040086afcb}
-
-Sets the acceptable language list.
-
-#### Parameters
-* `value` The acceptable languate list
-
----
-### `public const QString `[`acceptLanguageList`](#class_q_cef_setting_1aee323c86faebc36358a92c931c500478)`() const` {#class_q_cef_setting_1aee323c86faebc36358a92c931c500478}
-
-Gets the acceptable language list.
-
-#### Returns
-The acceptable languate list
 
 ---
 ### `public void `[`setWindowlessFrameRate`](#class_q_cef_setting_1a4a5810da8e070288ff80c069f5b52f23)`(const int value)` {#class_q_cef_setting_1a4a5810da8e070288ff80c069f5b52f23}
@@ -382,22 +379,6 @@ Sets to enable or disable the permission of pasting DOM in Javascript.
 ### `public const QVariant `[`javascriptDomPaste`](#class_q_cef_setting_1a6696cc8fa0b4ea1ef14d71259cd4350d)`() const` {#class_q_cef_setting_1a6696cc8fa0b4ea1ef14d71259cd4350d}
 
 Gets whether to enable or disable the permission of pasting DOM in Javascript.
-
-#### Returns
-True to enable; false to disable
-
----
-### `public void `[`setPlugins`](#class_q_cef_setting_1afd5813a87ece2924265a90544885e2c0)`(const bool value)` {#class_q_cef_setting_1afd5813a87ece2924265a90544885e2c0}
-
-Sets to enable or disable plugins.
-
-#### Parameters
-* `value` True to enable; false to disable
-
----
-### `public const QVariant `[`plugins`](#class_q_cef_setting_1a99c3a6c649171d42402af815f6628f03)`() const` {#class_q_cef_setting_1a99c3a6c649171d42402af815f6628f03}
-
-Gets whether to enable or disable plugins.
 
 #### Returns
 True to enable; false to disable

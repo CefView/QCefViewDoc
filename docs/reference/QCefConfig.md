@@ -32,10 +32,12 @@ Represents the CEF setting. For more details please refer to: [https://bitbucket
 `public const QString `[`userAgent`](#class_q_cef_config_1ad95b55d57719d9fc1a3dc5abb5695016)`() const`                  | Gets the user agent.
 `public void `[`setCachePath`](#class_q_cef_config_1aa8f73284ec9ed73dc2028b8c89e8e3c8)`(const QString & path)`                  | Sets the cache directory path.
 `public const QString `[`cachePath`](#class_q_cef_config_1ab3a95ce139ce862abb4abb300c1cc1e3)`() const`                  | Gets the cache directory path.
-`public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)`                  | Sets the user data directory path.
-`public const QString `[`userDataPath`](#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9)`() const`                  | Gets the user data directory path.
+`public const QString `[`rootCachePath`](#class_q_cef_config_1a5bc459471e82e88326c17220a0e05310)`() const`                  | Gets the root cache directory path.
+`public void `[`setRootCachePath`](#class_q_cef_config_1a768b9bc0368ac7a82f6e74aec536aa8f)`(const QString & path)`                  | Sets the root cache directory path.
 `public void `[`setBridgeObjectName`](#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60)`(const QString & name)`                  | Sets the bridge object name.
 `public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const`                  | Gets the bridge object name.
+`public void `[`setBuiltinSchemeName`](#class_q_cef_config_1a7e84d09e2bcacfc5fdfb8eeca49aca98)`(const QString & name)`                  | Sets the built-in scheme name.
+`public const QString `[`builtinSchemeName`](#class_q_cef_config_1a626d58894a334167dfc3fbe4fa055711)`() const`                  | Gets the built-in scheme object name.
 `public void `[`setBackgroundColor`](#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0)`(const QColor & color)`                  | Sets the background color of the web page.
 `public const QVariant `[`backgroundColor`](#class_q_cef_config_1aa04db9637f47424834bbcdf05a8b640b)`() const`                  | Gets the background color.
 `public void `[`setAcceptLanguageList`](#class_q_cef_config_1a360c26dd512b9a4a3d6596c0590c370b)`(const QString & languages)`                  | Sets the acceptable language list.
@@ -200,17 +202,17 @@ Sets the cache directory path.
 Gets the cache directory path.
 
 ---
-### `public void `[`setUserDataPath`](#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852)`(const QString & path)` {#class_q_cef_config_1a1026015e087a1abaebd81b6a7bf47852}
+### `public const QString `[`rootCachePath`](#class_q_cef_config_1a5bc459471e82e88326c17220a0e05310)`() const` {#class_q_cef_config_1a5bc459471e82e88326c17220a0e05310}
 
-Sets the user data directory path.
-
-#### Parameters
-* `path` The user data directory path
+Gets the root cache directory path.
 
 ---
-### `public const QString `[`userDataPath`](#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9)`() const` {#class_q_cef_config_1a317ff9d74e89dac404e20005c33b08e9}
+### `public void `[`setRootCachePath`](#class_q_cef_config_1a768b9bc0368ac7a82f6e74aec536aa8f)`(const QString & path)` {#class_q_cef_config_1a768b9bc0368ac7a82f6e74aec536aa8f}
 
-Gets the user data directory path.
+Sets the root cache directory path.
+
+#### Parameters
+* `path` The root cache directory path
 
 ---
 ### `public void `[`setBridgeObjectName`](#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60)`(const QString & name)` {#class_q_cef_config_1a03687393e227bc8747bdc9ffa7400d60}
@@ -226,6 +228,21 @@ The bridge object represents a Javascript object which will be inserted into all
 ### `public const QString `[`bridgeObjectName`](#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35)`() const` {#class_q_cef_config_1aab1ee01c7697e38b94b8edf961da4b35}
 
 Gets the bridge object name.
+
+---
+### `public void `[`setBuiltinSchemeName`](#class_q_cef_config_1a7e84d09e2bcacfc5fdfb8eeca49aca98)`(const QString & name)` {#class_q_cef_config_1a7e84d09e2bcacfc5fdfb8eeca49aca98}
+
+Sets the built-in scheme name.
+
+#### Parameters
+* `name` The scheme name
+
+The default value is CefView
+
+---
+### `public const QString `[`builtinSchemeName`](#class_q_cef_config_1a626d58894a334167dfc3fbe4fa055711)`() const` {#class_q_cef_config_1a626d58894a334167dfc3fbe4fa055711}
+
+Gets the built-in scheme object name.
 
 ---
 ### `public void `[`setBackgroundColor`](#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0)`(const QColor & color)` {#class_q_cef_config_1a2ef252883876dd17193212c52bd02fc0}
